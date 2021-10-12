@@ -1,5 +1,6 @@
 <?php
 class montarTabla{
+    
     public static function montar($datos){
        print_r($datos);
         foreach($datos as $key=>$value){

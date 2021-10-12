@@ -51,9 +51,7 @@
                 echo 'Consulta realizada';
                 echo '<br>';
                 $this->consulta->execute();
-                $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_OBJ);
-                print_r($this->portatiles);
-                echo '<br>';
+                $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
                 var_dump($this->portatiles);
                 return $this->portatiles;
             }catch(PDOException $e){

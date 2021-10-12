@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require_once('montarTabla.php');
+require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 ?>
 <head>
     <meta charset='utf-8'>
