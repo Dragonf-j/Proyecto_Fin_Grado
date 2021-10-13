@@ -3,17 +3,17 @@
 <?php
 require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 ?>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src='../javaScript/elegir.js'></script>
 </head>
 
-<body >
+<body>
     <header>
         <div class="bg-info sticky-sm-top sticky-md-top sticky-lg-top sticky-xl-top">
             <h1>Elige tu portatil</h1>
@@ -21,7 +21,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <ul class=" nav justify-content-center">
                     <li class="nav-item">
                         <a href="../index.php" class="nav-link active">Inicio</a>
-                    </li >
+                    </li>
                     <li class="nav-item">
                         <a href="tipos.php" class="nav-link active">Tipos portatiles</a>
                     </li>
@@ -30,10 +30,10 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                     </li>
 
                 </ul>
-                    
-                    
-                    
-                
+
+
+
+
             </div>
         </div>
 
@@ -44,19 +44,19 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
             <div class="form-check" id="tipos">
                 <label for="Tipo">Tipos de portatiles</label><br>
                 <label for="gaming">Portatil gaming</label>
-                <input type="radio" class="form-check-input" class="tipos"  onclick="mostrar(0) "  name="tipos">
+                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(0) " name="tipos">
                 <br>
                 <label for="simple">Portatil basico</label>
-                <input type="radio" class="form-check-input"  class="tipos" onclick="mostrar(1)"  name="tipos">
+                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(1)" name="tipos">
                 <br>
                 <label for="edi">Portatil edicion</label>
-                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(2)"  name="tipos">
+                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(2)" name="tipos">
                 <br>
                 <label for="ultra">Portatil Ultrabook</label>
-                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(3)"  name="tipos">
+                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(3)" name="tipos">
                 <br>
                 <label for="dosenuno">Portatil 2 en 1</label>
-                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(3)"  name="tipos">
+                <input type="radio" class="form-check-input" class="tipos" onclick="mostrar(3)" name="tipos">
 
             </div>
 
@@ -97,7 +97,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <input type="radio" class="form-check-input" name="memoria">
                 <br>
                 <label for="max">16 GB</label>
-                <input type="radio"class="form-check-input" class="form-check-input" name="memoria">
+                <input type="radio" class="form-check-input" class="form-check-input" name="memoria">
                 <br>
                 <label for="max-extend">32 Gb</label>
                 <input type="radio" class="form-check-input" name="memoria">
@@ -111,9 +111,9 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <input type="radio" class="form-check-input" name="pulgadas">
                 <br>
                 <label for="max">Portatil grande</label>
-                <input type="radio"class="form-check-input" class="form-check-input" name="pulgadas">
+                <input type="radio" class="form-check-input" class="form-check-input" name="pulgadas">
                 <br>
-                
+
             </div>
             <div class="form-check" id="Precio">
                 <label for="precio">Precio</label><br>
@@ -124,9 +124,9 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <input type="radio" class="form-check-input" name="precio">
                 <br>
                 <label for="Caro">Lo mas caro</label>
-                <input type="radio"class="form-check-input" class="form-check-input" name="precio">
+                <input type="radio" class="form-check-input" class="form-check-input" name="precio">
                 <br>
-                
+
             </div>
 
             <div class="form-check" id="Hercios">
@@ -138,24 +138,24 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <input type="radio" class="form-check-input" name="hercios">
                 <br>
                 <label for="altaCompeticion">240hz-300hz</label>
-                <input type="radio"class="form-check-input" class="form-check-input" name="hercios">
+                <input type="radio" class="form-check-input" class="form-check-input" name="hercios">
                 <br>
                 <label for="altaCompeticion+">360hz</label>
-                <input type="radio"class="form-check-input" class="form-check-input" name="hercios">
+                <input type="radio" class="form-check-input" class="form-check-input" name="hercios">
                 <br>
-                
+
             </div>
 
             <div class="form-check" id="net">
-                <label for="network">Conector de  Red</label><br>
+                <label for="network">Conector de Red</label><br>
                 <label for="afirmativo">Si</label>
                 <input type="radio" class="form-check-input" name="network">
                 <br>
                 <label for="negativo">No</label>
                 <input type="radio" class="form-check-input" name="network">
                 <br>
-                
-                
+
+
             </div>
 
 
@@ -167,8 +167,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <label for="negativo">No</label>
                 <input type="radio" class="form-check-input" name="sistema">
                 <br>
-                
-                
+
+
             </div>
 
 
@@ -180,8 +180,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <label for="negativo">No</label>
                 <input type="radio" class="form-check-input" name="c">
                 <br>
-                
-                
+
+
             </div>
 
             <div class="form-check" id="thunderBolt">
@@ -192,8 +192,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
                 <label for="negativo">No</label>
                 <input type="radio" class="form-check-input" name="Thunderbolt">
                 <br>
-                
-                
+
+
             </div>
 
         </form>
@@ -203,11 +203,19 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 
     <div>
         <?php
-            require_once('../models/portatilesCurd.php');
-            $prueba = new PortatilCrud();
-            echo '<br>';
-            $prueba->getPortatil();
-            montarTabla::montar($datos);
+        // require_once('../models/portatilesCurd.php');
+        // $prueba = new PortatilCrud();
+        // echo '<br>';
+        // $prueba->getPortatil();
+        echo('<pre>');
+
+        require_once('../controlers/controlador.php');
+        $cLaptop = new ControladorPortatil();
+
+       $datos=  $cLaptop->viewLaptop();
+        montarTabla::montar($datos);
+        //var_dump($cLaptop);
+        //print_r($cLaptop);
         ?>
     </div>
 

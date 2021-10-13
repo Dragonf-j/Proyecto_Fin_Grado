@@ -36,7 +36,7 @@
     
                 $this->conexion = new PDO($dsn, $this->users, $this->password);//conexion 
                 $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//extraccion y formateo de datos
-                echo 'Conexión Realizada';
+                // echo 'Conexión Realizada';
                 $this->portatiles=[];//array que contendra los datos
     
             }catch(PDOException $exp){
@@ -46,13 +46,13 @@
     
         public function getPortatil(){
             try{
-                $sentencia='SELECT * FROM portatil';
+                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes FROM portatil';
                 $this->consulta = $this->conexion->prepare($sentencia);
-                echo 'Consulta realizada';
-                echo '<br>';
+                // echo 'Consulta realizada';
+                // echo '<br>';
                 $this->consulta->execute();
                 $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($this->portatiles);
+                //var_dump($this->portatiles);
                 return $this->portatiles;
             }catch(PDOException $e){
                 echo $e;
