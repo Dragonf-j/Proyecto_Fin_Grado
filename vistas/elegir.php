@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php
-require_once('../vistas/Vistas_dinamicas/montarTabla.php');
-?>
+
 
 <head>
     <meta charset='utf-8'>
@@ -195,28 +193,25 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 
 
             </div>
-
+            <div>
+                <input type="submit" value="Mostrar" name="mostrar">
+            </div>
         </form>
 
 
     </div>
 
-    <div>
-        <?php
-        // require_once('../models/portatilesCurd.php');
-        // $prueba = new PortatilCrud();
-        // echo '<br>';
-        // $prueba->getPortatil();
-        echo('<pre>');
+    <div class="container bg-light d-flex flex-column justify-content-around">
+        
+        <?php    
+    require_once('../controlers/controlador.php');
+       $cLaptop = new ControladorPortatil();
 
-        require_once('../controlers/controlador.php');
-        $cLaptop = new ControladorPortatil();
+        $datos=  $cLaptop->mostrar();
 
-       $datos=  $cLaptop->viewLaptop();
-        montarTabla::montar($datos);
-        //var_dump($cLaptop);
-        //print_r($cLaptop);
+        
         ?>
+
     </div>
 
     <!-- <footer class="bg-info fixed-bottom">

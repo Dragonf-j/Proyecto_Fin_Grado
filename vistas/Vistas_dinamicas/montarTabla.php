@@ -22,6 +22,8 @@ class montarTabla{
                 echo '<th>';
                 echo $value2;
                 echo '</th>';
+
+                
             }
             echo '</tr>';
             echo '</table>';
