@@ -15,19 +15,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
         $this->laptop = new PortatilCrud();
      }
 
-     /**
-      * Método para enviar los datos sacamos de la base de datos a la ventana de elegir, debemos hacer un returns apra que nos devuelva los datos
-      */
-     public function viewLaptop(){
-        $datos = $this->laptop->getPortatil();
-      //   echo('<pre>');
-      //   var_dump($datos);
-        /*Este var_dump es una prueba de depuración para comprobar que los datos estan en la variable
-        */
-        
-        require_once('../vistas/elegir.php');
-        return $datos;
-     }
+  
  
      public function mostrar(){
       $datos = $this->laptop->getPortatil();
@@ -44,4 +32,4 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
       $cLaptop->mostrar();
     }
   
-    $cLaptop->viewLaptop();
+ 
