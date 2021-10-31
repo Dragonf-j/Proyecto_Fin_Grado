@@ -197,6 +197,13 @@
                 <input type="submit" value="Mostrar" name="mostrar">
             </div>
         </form>
+        <form action="../models/imagenes.php" method="POST" enctype="multipart/form-data">
+        
+            <label for="imagen">Imagen</label>
+            <input type="file" name="imagen">
+            <input type="submit" value="Enviar">
+        </form>
+      
 
 
     </div>
@@ -208,7 +215,7 @@
        $cLaptop = new ControladorPortatil();
 
         $datos=  $cLaptop->mostrar();
-
+  
         
         ?>
 

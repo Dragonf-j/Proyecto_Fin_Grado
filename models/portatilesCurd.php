@@ -46,7 +46,7 @@
     
         public function getPortatil(){
             try{
-                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes FROM portatil';
+                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes, imagen FROM portatil';
                 $this->consulta = $this->conexion->prepare($sentencia);
                 // echo 'Consulta realizada';
                 // echo '<br>';
@@ -60,6 +60,19 @@
           
     
         }
+        //Metodo descartado para subir imagen
+        
+        // public  function update($img){
+        //     $nombre_img = $_FILES[$img]['name'];
+            
+        //     $directorio = $_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/img/'; 
+        //     move_uploaded_file($_FILES[$img]['tmp_name'],$directorio.$nombre_img);
+        //     echo $nombre_img;
+
+
+           
+         
+        // }
     
     }
 

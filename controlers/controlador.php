@@ -22,6 +22,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
       montarTabla::montar($datos);
      }
 
+    
+
 
     }
 

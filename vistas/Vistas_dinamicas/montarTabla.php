@@ -6,7 +6,7 @@ class montarTabla{
             if($key == 0){
 
                 echo '<table>';
-                echo '<tr>';
+                echo '<tr">';
 
                 foreach($value as $key2=>$value2){
                     echo '<th>';
@@ -16,12 +16,13 @@ class montarTabla{
                 echo '</tr>';
             }
 
-            echo '<tr>';
+            echo '<tr >';
 
             foreach($value as $key2=>$value2){
-                echo '<th>';
+                echo '<td>';
                 echo $value2;
-                echo '</th>';
+               
+                echo '</td>';
 
                 
             }
