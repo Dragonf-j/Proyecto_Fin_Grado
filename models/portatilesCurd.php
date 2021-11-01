@@ -60,19 +60,26 @@
           
     
         }
-        //Metodo descartado para subir imagen
+        //Metodo para actualizar la base de datos
         
-        // public  function update($img){
-        //     $nombre_img = $_FILES[$img]['name'];
-            
-        //     $directorio = $_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/img/'; 
-        //     move_uploaded_file($_FILES[$img]['tmp_name'],$directorio.$nombre_img);
-        //     echo $nombre_img;
+        public  function update($nombre_imagen){
+
+            try{
+
+            $sentencia = "UPDATE portatil SET imagen='$nombre_imagen' WHERE id = 3";
+            $this->consulta =$this->conexion->prepare($sentencia);
+            $this->consulta->execute();
+            echo 'aqui llega';
+
+            }catch(PDOException $e){
+                echo $e;
+            }
+           
 
 
            
          
-        // }
+        }
     
     }
 

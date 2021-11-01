@@ -1,7 +1,7 @@
 <?php
 require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 /**
- * laase que controla el funcionamiento entre la web y la base de datos
+ * clase que controla el funcionamiento entre la web y la base de datos
  */
     class ControladorPortatil{
       private $laptop;
@@ -22,6 +22,13 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
       montarTabla::montar($datos);
      }
 
+
+     public function act($nombre_imagen){
+        require_once('./proyecto/vistas/vistas_privadas/imagenes.php');
+         $this->laptop->update($nombre_imagen);
+        
+
+     }
     
 
 
