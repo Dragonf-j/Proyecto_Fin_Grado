@@ -38,7 +38,7 @@
     </header>
 
     <div class="container bg-light d-flex flex-column justify-content-around ">
-        <form action="">
+        <form action="" method="POST">
             <div class="form-check" id="tipos">
                 <label for="Tipo">Tipos de portatiles</label><br>
                 <label for="gaming">Portatil gaming</label>
@@ -208,9 +208,12 @@
         <?php    
     require_once('../controlers/controlador.php');
        $cLaptop = new ControladorPortatil();
-
-        $datos=  $cLaptop->mostrar();
-  
+        $cLaptop->random();
+        
+        // if(isset($_POST['mostrar'])){
+        //     echo 'El boton funciona';
+        //     $datos=  $cLaptop->mostrar();
+        //   }
         
         ?>
 

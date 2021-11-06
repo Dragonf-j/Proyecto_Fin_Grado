@@ -55,7 +55,7 @@
                 //var_dump($this->portatiles);
                 return $this->portatiles;
             }catch(PDOException $e){
-                echo $e;
+                echo $e->getMessage();
             }
           
     
@@ -72,7 +72,7 @@
             echo 'aqui llega';
 
             }catch(PDOException $e){
-                echo $e;
+                echo $e->getMessage();
             }
            
 
@@ -80,6 +80,32 @@
            
          
         }
+
+        public function ContarLaptop(){
+            try{
+                $sentencia = 'SELECT COUNT(id) FROM portatil';
+                $this->consulta=$this->conexion->prepare($sentencia);
+                $this->consulta->execute();
+                $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+                require_once('../vistas/Vistas_dinamicas/contar.php');
+                $r = contar::rercorrer($datos);
+                $numero =  random_int(1, $r);
+
+               $sentencia2= "SELECT * FROM portatil WHERE id = '.$numero'";
+
+
+            }catch(PDOException $e){
+                echo $e->getMessage(); 
+            }
+
+        }
+
+
+        // public function ViewRandom(){
+        //     $numero = .ContarLaptop();
+        //     $sentencia = '';
+        // }
+
     
     }
 

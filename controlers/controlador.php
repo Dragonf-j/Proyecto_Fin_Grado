@@ -30,6 +30,10 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 
      }
     
+     public function random(){
+      $this->laptop->ContarLaptop();
+     
+     }
 
 
     }
@@ -37,8 +41,10 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
     $cLaptop = new ControladorPortatil();
 
     if(isset($_POST['mostrar'])){
-       echo 'El boton funciona';
+      echo 'El boton funciona';
       $cLaptop->mostrar();
     }
+
+   
   
  

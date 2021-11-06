@@ -35,6 +35,11 @@
         </div>
 
     </header>
+
+    <div class="container bg-light d-flex flex-column justify-content-around">
+    
+
+    </div>
     <div class="container bg-light d-flex flex-column justify-content-around">
         <div>
             <p>Mejores portatiles actuales</p>
