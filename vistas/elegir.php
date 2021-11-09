@@ -9,33 +9,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src='../javaScript/elegir.js'></script>
+    <link rel="stylesheet" href="../estilos/estilos.css">
 </head>
 
 <body>
-    <header>
-        <div class="bg-info sticky-sm-top sticky-md-top sticky-lg-top sticky-xl-top">
+    <header class="container-fluid cabecera">
+        <div>
             <h1>Elige tu portatil</h1>
-            <div>
-                <ul class=" nav justify-content-center">
-                    <li class="nav-item">
-                        <a href="../index.php" class="nav-link active">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tipos.php" class="nav-link active">Tipos portatiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="elegir.php" class="nav-link active">Elige tu portatil</a>
-                    </li>
+            <nav class="col-sm-3 p-3 rounded-pill ">
 
+                <ul class="nav nav-pills  justify-content-center">
+                    <li class="nav-item col-sm-4   ">
+                        <a href="../index.php" class="nav-link active  ">Inicio</a>
+                    </li>
+                    <li class="nav-item col-sm-4 ">
+                        <a href="tipos.php" class="nav-link active ">Tipos portatiles</a>
+                    </li>
+                    <li class="nav-item col-sm-4 ">
+                        <a href="elegir.php" class="nav-link active ">Elige tu portatil</a>
+                    </li>
                 </ul>
 
 
 
 
-            </div>
+
+
+            </nav>
         </div>
 
     </header>
+
 
     <div class="container bg-light d-flex flex-column justify-content-around ">
         <form action="" method="POST">
@@ -197,29 +201,29 @@
                 <input type="submit" value="Mostrar" name="mostrar">
             </div>
         </form>
-        
-      
+
+
 
 
     </div>
 
     <div class="container bg-light d-flex flex-column justify-content-around">
-        
-        <?php    
-    require_once('../controlers/controlador.php');
-       $cLaptop = new ControladorPortatil();
-        $cLaptop->random();
-        
+
+        <?php
+        require_once('../controlers/controlador.php');
+        $cLaptop = new ControladorPortatil();
+
+
         // if(isset($_POST['mostrar'])){
         //     echo 'El boton funciona';
         //     $datos=  $cLaptop->mostrar();
         //   }
-        
+
         ?>
 
     </div>
 
-    <!-- <footer class="bg-info fixed-bottom">
+    <footer class=" fixed-bottom">
         <div>
             <div>
                 <h6>Redes solciales</h6>
@@ -229,7 +233,7 @@
             </div>
         </div>
 
-    </footer> -->
+    </footer>
 </body>
 
 </html>

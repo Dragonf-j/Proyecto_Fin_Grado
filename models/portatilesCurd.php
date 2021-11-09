@@ -91,8 +91,7 @@
                 $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
 
-               $sentencia2= "SELECT * FROM portatil WHERE id = '.$numero'";
-
+            // usar un bucle apara que haga la snetencia seis veces, el numero lo coge de forma aleteroia
 
             }catch(PDOException $e){
                 echo $e->getMessage(); 
