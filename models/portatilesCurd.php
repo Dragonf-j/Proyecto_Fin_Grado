@@ -46,7 +46,7 @@
     
         public function getPortatil(){
             try{
-                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes, imagen FROM portatil';
+                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes, imagen FROM portatil ';
                 $this->consulta = $this->conexion->prepare($sentencia);
                 // echo 'Consulta realizada';
                 // echo '<br>';
@@ -57,6 +57,7 @@
             }catch(PDOException $e){
                 echo $e->getMessage();
             }
+            
           
     
         }
@@ -65,7 +66,7 @@
         public  function update($nombre_imagen){
 
             try{
-
+                echo $nombre_imagen;
             $sentencia = "UPDATE portatil SET imagen='$nombre_imagen' WHERE id = 3";
             $this->consulta =$this->conexion->prepare($sentencia);
             $this->consulta->execute();
@@ -90,8 +91,12 @@
                 require_once('../vistas/Vistas_dinamicas/contar.php');
                 $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
-
+                echo $numero;
             // usar un bucle apara que haga la snetencia seis veces, el numero lo coge de forma aleteroia
+
+            for($i=0; $i<=$numero; $i++){
+                $sentencia = '';
+            }
 
             }catch(PDOException $e){
                 echo $e->getMessage(); 

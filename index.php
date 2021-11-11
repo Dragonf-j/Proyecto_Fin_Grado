@@ -48,7 +48,14 @@
 
 
         </div>
+        <div class="row">
+        <?php
+            require_once('controlers/controladorIndex.php');
+            $cLaptop = new controlerIndex();
+            $cLaptop->random();
+        ?>
 
+        </div>
 
     </div>
 

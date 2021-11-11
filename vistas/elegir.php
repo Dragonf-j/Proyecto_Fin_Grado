@@ -223,7 +223,7 @@
 
     </div>
 
-    <footer class=" fixed-bottom">
+    <!-- <footer class=" fixed-bottom">
         <div>
             <div>
                 <h6>Redes solciales</h6>
@@ -233,7 +233,7 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 </body>
 
 </html>
