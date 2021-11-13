@@ -91,12 +91,12 @@
                 require_once('../vistas/Vistas_dinamicas/contar.php');
                 $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
-                echo $numero;
+                return $numero;
             // usar un bucle apara que haga la snetencia seis veces, el numero lo coge de forma aleteroia
 
-            for($i=0; $i<=$numero; $i++){
-                $sentencia = '';
-            }
+            // for($i=0; $i<=$numero; $i++){
+            //     $sentencia = '';
+            // }
 
             }catch(PDOException $e){
                 echo $e->getMessage(); 

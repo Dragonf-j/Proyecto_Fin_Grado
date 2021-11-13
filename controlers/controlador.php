@@ -11,7 +11,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
  */
      public function __construct()
      {
-         require_once('../models/portatilesCurd.php');
+        require_once('../models/portatilesCurd.php');
         $this->laptop = new PortatilCrud();
      }
 
