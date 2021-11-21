@@ -46,7 +46,7 @@
     
         public function getPortatil(){
             try{
-                $sentencia='SELECT Tipo, ram, Precio_Amazon, Precio_Pccomponentes, imagen FROM portatil ';
+                $sentencia='SELECT * FROM portatil ';
                 $this->consulta = $this->conexion->prepare($sentencia);
                 // echo 'Consulta realizada';
                 // echo '<br>';
@@ -91,7 +91,7 @@
                 require_once('../vistas/Vistas_dinamicas/contar.php');
                 $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
-                return $numero;
+                echo $numero;
             // usar un bucle apara que haga la snetencia seis veces, el numero lo coge de forma aleteroia
 
             // for($i=0; $i<=$numero; $i++){

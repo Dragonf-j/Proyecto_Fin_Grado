@@ -29,7 +29,11 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
         
 
      }
-    
+     public function random()
+     {
+         echo "aqui llega controlador";
+         $this->laptop->ContarLaptop();
+     }
      
 
 
@@ -38,7 +42,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
     $cLaptop = new ControladorPortatil();
 
     if(isset($_POST['mostrar'])){
-    
+      // $cLaptop->random();
       $cLaptop->mostrar();
     }
 

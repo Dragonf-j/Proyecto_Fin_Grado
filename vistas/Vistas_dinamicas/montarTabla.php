@@ -5,8 +5,9 @@ class montarTabla{
         foreach($datos as $key=>$value){
             if($key == 0){
 
-                echo '<table>';
-                echo '<tr">';
+                echo '<table border ="1px solid black">';
+                echo '<tr border ="1px solid black">';
+                
 
                 foreach($value as $key2=>$value2){
                     echo '<th>';

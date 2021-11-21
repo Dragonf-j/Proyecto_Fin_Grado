@@ -50,10 +50,9 @@
         </div>
         <div class="row">
         <?php
-            require_once('controlers/controladorIndex.php');
-            $cLaptop = new controlerIndex();
-            $cLaptop->random();
-
+           require_once('controlers/Controlers_index/controlador.php');
+           $index  = new controlerIndex();
+         
             
 
         ?>
