@@ -21,7 +21,15 @@ footer{
     border-radius: 1.2vh;
     
 }
-.navTi{
-    position: relative; 
+div.divTip{
+    margin-top: 2vh;
+}
+
+#gaming{
+    margin: 2vh;
+}
+
+.principal{
+    margin: 4vh;
 }
 

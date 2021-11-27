@@ -11,7 +11,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <script src='main.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -57,21 +57,17 @@
     </header>
 
     <div class="container bg-light p-2 ms-auto principal">
-        <div class="row">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab culpa a laboriosam eos dicta aliquid quod aspernatur, repellat tempore earum facilis blanditiis rerum eaque harum voluptatem fuga esse unde suscipit!
-
-
-        </div>
-        <div class="row">
-            <?php
+    <?php
             require_once('models/portatilesCurd.php');
             include_once('controlers/Controlers_index/controlador.php');
             $controlerIndex = new controlerIndex();
             $controlerIndex->ramdon();
 
             ?>
+        <!-- <div class="row">
+            
 
-        </div>
+        </div> -->
 
     </div>
 
