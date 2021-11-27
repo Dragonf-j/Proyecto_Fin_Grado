@@ -29,11 +29,7 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
         
 
      }
-     public function random()
-     {
-         echo "aqui llega controlador";
-         $this->laptop->ContarLaptop();
-     }
+    
      
 
 

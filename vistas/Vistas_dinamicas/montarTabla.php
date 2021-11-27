@@ -2,6 +2,8 @@
 
 class montarTabla{
     public static function montar($datos){
+
+       
         foreach($datos as $key=>$value){
             if($key == 0){
 
@@ -22,7 +24,7 @@ class montarTabla{
             foreach($value as $key2=>$value2){
                 echo '<td>';
                 echo $value2;
-               
+                
                 echo '</td>';
 
                 
@@ -40,3 +42,4 @@ class montarTabla{
 
 
 ?>
+<img src="../../img/" alt="">

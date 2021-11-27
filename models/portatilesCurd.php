@@ -67,7 +67,7 @@
 
             try{
                 echo $nombre_imagen;
-            $sentencia = "UPDATE portatil SET imagen='$nombre_imagen' WHERE id = 3";
+            $sentencia = "UPDATE portatil SET imagen='$nombre_imagen' WHERE id = 1";
             $this->consulta =$this->conexion->prepare($sentencia);
             $this->consulta->execute();
             echo 'aqui llega';
@@ -88,15 +88,15 @@
                 $this->consulta=$this->conexion->prepare($sentencia);
                 $this->consulta->execute();
                 $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
-                require_once('../vistas/Vistas_dinamicas/contar.php');
-                $r = contar::rercorrer($datos);
+                require_once('/xampp/htdocs/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
+               $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
-                echo $numero;
-            // usar un bucle apara que haga la snetencia seis veces, el numero lo coge de forma aleteroia
-
-            // for($i=0; $i<=$numero; $i++){
-            //     $sentencia = '';
-            // }
+                
+                $sentencia2 = "SELECT * FROM portatil WHERE id='$numero'";
+                $this->consulta=$this->conexion->prepare($sentencia2);
+                $this->consulta->execute();
+                $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+                return $this->portatiles;
 
             }catch(PDOException $e){
                 echo $e->getMessage(); 
@@ -105,10 +105,11 @@
         }
 
 
-        // public function ViewRandom(){
-        //     $numero = .ContarLaptop();
-        //     $sentencia = '';
-        // }
+
+
+
+
+       
 
     
     }
