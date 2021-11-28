@@ -10,8 +10,8 @@ class controlerIndex{
     }
 
     public function ramdon(){
-        echo 'aqui llega';
-        $datos = $this->cIn->ContarLaptop();;
+        $datos = $this->cIn->ContarLaptop();
+     
          montarTabla::montar($datos);
         
         

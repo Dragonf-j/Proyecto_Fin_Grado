@@ -9,6 +9,7 @@
         private $consulta;
         private $portatiles;
         private $nameDB;
+        private $lap;
     
     
     
@@ -37,22 +38,42 @@
                 $this->conexion = new PDO($dsn, $this->users, $this->password);//conexion 
                 $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//extraccion y formateo de datos
                 // echo 'Conexión Realizada';
-                $this->portatiles=[];//array que contendra los datos
+                $this->portatiles=[];//array que contendra los 
+                
     
             }catch(PDOException $exp){
                 return $exp->getMessage();
             }
         }
     
+        // public function getPortatil(){
+        //     try{
+        //         $sentencia='SELECT * FROM portatil';
+        //         $this->consulta = $this->conexion->prepare($sentencia);
+        //         // echo 'Consulta realizada';
+        //         // echo '<br>';
+        //         $this->consulta->execute();
+        //         $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
+        //         //var_dump($this->portatiles);
+        //         return $this->portatiles;
+        //     }catch(PDOException $e){
+        //         echo $e->getMessage();
+        //     }
+            
+          
+    
+        // }
         public function getPortatil(){
             try{
-                $sentencia='SELECT * FROM portatil ';
+                $sentencia="SELECT * FROM portatil WHERE tipo= tipo";
                 $this->consulta = $this->conexion->prepare($sentencia);
                 // echo 'Consulta realizada';
                 // echo '<br>';
-                $this->consulta->execute();
+                $this->consulta->execute(
+                    
+                );
                 $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
-                //var_dump($this->portatiles);
+                var_dump($this->portatiles);
                 return $this->portatiles;
             }catch(PDOException $e){
                 echo $e->getMessage();
@@ -61,6 +82,7 @@
           
     
         }
+
         //Metodo para actualizar la base de datos
         
         public  function update($nombre_imagen){
@@ -91,12 +113,13 @@
                 require_once('/xampp/htdocs/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
                $r = contar::rercorrer($datos);
                 $numero =  random_int(1, $r);
-                
+                var_dump($numero);
                 $sentencia2 = "SELECT * FROM portatil WHERE id='$numero'";
                 $this->consulta=$this->conexion->prepare($sentencia2);
                 $this->consulta->execute();
-                $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+                $this->portatiles = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
                 return $this->portatiles;
+                
 
             }catch(PDOException $e){
                 echo $e->getMessage(); 

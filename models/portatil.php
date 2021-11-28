@@ -13,11 +13,14 @@ class ordenador
 	private $enlace_amazon;
 	private $enlace_pccomponetes;
 
-	public function __construct()
+	public function __construct($tipo)
 	{
-		
+		$this->tipo =$tipo;
 	}
 
+	public function getTipo(){
+		return $this->tipo;
+	}
 	
 }
 

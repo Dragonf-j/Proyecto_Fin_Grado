@@ -25,11 +25,11 @@ div.divTip{
     margin-top: 2vh;
 }
 
-#gaming{
-    margin: 2vh;
-}
+/* .content{
 
-.principal{
-    margin: 4vh;
+    background-color: rgb(49, 49, 49); 
+} */
+nav{
+    background-color: rgb(34, 34, 34);
 }
 

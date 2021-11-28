@@ -8,12 +8,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../estilos/estilos.css">
+    <!-- <link rel="stylesheet" href="../estilos/bootstrap-5.1.3-dist/css/bootstrap.css"> -->
+    <link  href="../estilos/estilos.css" rel="stylesheet">
+  
 
     <style>
         .content {
             margin: 2vh 2vh 2vh 2vh;
+
         }
+   
     </style>
 </head>
 
@@ -63,12 +67,11 @@
 
 
     </header>
-    <div class="container divTip">
-        <div class="container bg-light d-flex flex-column justify-content-center ">
-            <h3>En el mundo de los portatiles podemos encontrar distintos tipos:</h3>
+    <div class="container">
+        <div class="container  bg-light d-flex flex-column d-flex ">
             <div class=" sticky-top" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-                    <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-dark  navpro">
+                    <div class="container">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#gaming">
@@ -81,14 +84,17 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#trabajo">
-                                    Trabajo
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
+                                    </svg>
+                                    Workstation
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#basico">Basico</a>
+                                <a class="nav-link" href="#basico">Básico</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#convertible">Convertible</a>
+                                <a class="nav-link" href="#convertible">2 en 1</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#header">
@@ -101,64 +107,36 @@
                     </div>
                 </nav>
             </div>
-            <div class="content">
-                <div id="gaming" class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta explicabo repellat illum velit, deleniti sapiente perspiciatis maxime blanditiis, possimus vero veniam quidem, harum voluptate accusamus ea. Unde voluptatem quasi itaque.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
+            <!-- <div class="content"> -->
+                <div class="mb-1">
+
+                    <h3 id="gaming" > Gaming</h3>
+
+                    <p>
+
+
+                    </p>
+
                 </div>
-                <div id="trabajo" class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repudiandae esse architecto cum soluta ex commodi ea reprehenderit, accusamus quisquam quis quia amet? Sunt veritatis laborum sapiente tenetur nisi voluptatem.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
+                <div class="mb-1">
+
+                    <h3 id="trabajo">Workstation</h3>
+
+                    <p></p>
+
                 </div>
-                <div id="basico" class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
+                <div class="mb-1">
+                    
+                            <h3 id="basico" >Ofirmatica</h3>
+                      
+                    <p></p>
+
                 </div>
-                <div id="convertible" class="mb-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsam sint in nihil, quaerat, nobis nisi commodi cum reprehenderit doloremque consequatur beatae quo eius veniam. Officia et veniam sed reiciendis!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magnam porro totam perferendis. Eligendi a distinctio voluptatum sed aspernatur nisi, voluptates nemo dolor ducimus ut magnam corporis, ab sequi nulla?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore corrupti consequatur quos molestiae nulla quibusdam ut ipsa deserunt, accusamus cupiditate consectetur laudantium debitis, nostrum eum minima obcaecati, architecto vel eaque!
+                <div class="mb-1">
+               
+                            <h3 id="convertible" >2 en 1</h3>
+                       
+                    <p></p>
 
 
                 </div>
