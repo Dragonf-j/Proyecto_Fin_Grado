@@ -11,9 +11,9 @@ class controlerIndex{
 
     public function ramdon(){
         $datos = $this->cIn->ContarLaptop();
+
+         montarTabla::montarIndex($datos);
      
-         montarTabla::montar($datos);
-        
         
     }
 

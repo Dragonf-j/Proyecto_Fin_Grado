@@ -1,45 +1,85 @@
 <?php
 
-class montarTabla{
-    public static function montar($datos){
+class montarTabla
+{
+    public static function montarIndex($datos)
+    {
 
-       
-        foreach($datos as $key=>$value){
-            if($key == 0){
-
-                echo '<table border ="1px solid black">';
-                echo '<tr border ="1px solid black">';
-                
-
-                foreach($value as $key2=>$value2){
-                    echo '<th>';
-                    echo $key2;
-                    echo '</th>';
-                }
-                echo '</tr>';
-            }
-
-            echo '<tr >';
-
-            foreach($value as $key2=>$value2){
-                echo '<td>';
-                echo $value2;
-                
-                echo '</td>';
-
-                
-            }
-            echo '</tr>';
-            echo '</table>';
-        }
-    }
-
-
-
- 
-}
-
+        foreach ($datos as $key => $value) {
+            $nombre = $value['nombre'];
+            $img = $value["imagen"];
+            $tipo = $value['tipo'];
+            $ram = $value['ram'];
+            $enlaceA = $value['enlace_amazon'];
+            $precioa = $value['precio_amazon'];
+            $enlacePc = $value['enlace_pccomponetes'];
+            $preciop = $value['precio_pcpcomponentes'];
+            $almacenamiento = $value['almacenamiento'];
 
 
 ?>
-<img src="../../img/" alt="">
+            <div class="col-md-auto"  >
+                <h3 class="container bg-light p-2 ms-auto h3"><?php echo $nombre; ?></h3>
+                <?php
+                ?> <h5><?php echo $tipo; ?></h5>
+                <?php
+                ?> <p>Memoria RAM: <?php echo $ram; ?>GB</p>
+                <?php
+                ?>
+                <p>ALmacenamiento en disco: <?php echo $almacenamiento; ?>GB</p>
+                <img class="img-responsive img-thumbnail" src="img/<?php echo $img; ?>" alt="img">
+                <?php echo '<br>'; ?>
+                <button class="btn btn-outline-secondary">
+                    <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
+                    <p><?php echo $precioa; ?>€</p>
+                </button>
+                <button class="btn btn-outline-secondary">
+                    <a class="nav-link" href="<?php echo $enlacePc; ?>">Pccomponentes</a>
+                    <p><?php echo $preciop; ?>€</p>
+                </button>
+            </div>
+
+        <?php
+        }
+    }
+
+    public static function montar($datos)
+    {
+
+        foreach ($datos as $key => $value) {
+            $nombre = $value['nombre'];
+            $img = $value["imagen"];
+            $tipo = $value['tipo'];
+            $ram = $value['ram'];
+            $enlaceA = $value['enlace_amazon'];
+            $precioa = $value['precio_amazon'];
+            $enlacePc = $value['enlace_pccomponetes'];
+            $preciop = $value['precio_pcpcomponentes'];
+            $almacenamiento = $value['almacenamiento'];
+
+
+        ?> <h3 class="container bg-light p-2 ms-auto h3"><?php echo $nombre; ?></h3>
+            <?php
+            ?> <h5><?php echo $tipo; ?></h5>
+            <?php
+            ?> <p>Memoria RAM: <?php echo $ram; ?>GB</p>
+            <?php
+            ?>
+            <p>ALmacenamiento en disco: <?php echo $almacenamiento; ?>GB</p>
+            <img class="img-responsive img-thumbnail" src="../img/<?php echo $img; ?>" alt="img">
+            <?php echo '<br>'; ?>
+            <button class="btn btn-outline-secondary">
+                <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
+                <p><?php echo $precioa; ?>€</p>
+            </button>
+            <button class="btn btn-outline-secondary">
+                <a class="nav-link" href="<?php echo $enlacePc; ?>">Pccomponentes</a>
+                <p><?php echo $preciop; ?>€</p>
+            </button>
+
+
+<?php
+        }
+    }
+}
+?>

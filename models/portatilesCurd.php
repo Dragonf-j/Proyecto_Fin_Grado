@@ -9,7 +9,7 @@
         private $consulta;
         private $portatiles;
         private $nameDB;
-        private $lap;
+  
     
     
     
@@ -63,9 +63,9 @@
           
     
         // }
-        public function getPortatil(){
+        public function getPortatil($tipo){
             try{
-                $sentencia="SELECT * FROM portatil WHERE tipo= tipo";
+                $sentencia="SELECT * FROM portatil WHERE tipo= '$tipo'";
                 $this->consulta = $this->conexion->prepare($sentencia);
                 // echo 'Consulta realizada';
                 // echo '<br>';
@@ -73,7 +73,8 @@
                     
                 );
                 $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($this->portatiles);
+                // var_dump($this->portatiles);
+              
                 return $this->portatiles;
             }catch(PDOException $e){
                 echo $e->getMessage();
@@ -106,18 +107,24 @@
 
         public function ContarLaptop(){
             try{
+               
                 $sentencia = 'SELECT COUNT(id) FROM portatil';
+                
                 $this->consulta=$this->conexion->prepare($sentencia);
                 $this->consulta->execute();
                 $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+               
                 require_once('/xampp/htdocs/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
                $r = contar::rercorrer($datos);
+              
                 $numero =  random_int(1, $r);
-                var_dump($numero);
+                // var_dump($numero);
+               
                 $sentencia2 = "SELECT * FROM portatil WHERE id='$numero'";
                 $this->consulta=$this->conexion->prepare($sentencia2);
                 $this->consulta->execute();
                 $this->portatiles = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+                
                 return $this->portatiles;
                 
 

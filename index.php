@@ -61,19 +61,20 @@
             require_once('models/portatilesCurd.php');
             include_once('controlers/Controlers_index/controlador.php');
             $controlerIndex = new controlerIndex();
+            for($i=0; $i<6; $i++){
             $controlerIndex->ramdon();
-
+            }
             ?>
         <!-- <div class="row">
             
 
         </div> -->
-
+            <img src="/img/fondo/35160-modernos.jpg" alt="img2">
     </div>
 
 
     </div>
-    <footer class=" fixed-bottom">
+    <footer class=" has-sticky-footer">
         <div>
             <div>
                 <h6>Redes solciales</h6>

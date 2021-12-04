@@ -28,22 +28,27 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
    public function mostrar(){
             if(isset($_POST['tipos'])){
                $tipo = $_POST['tipos'];
+            
+               
             }else{
                return;
             }
             if(isset($_POST['almacenamiento'])){
                $almacenamiento = $_POST['almacenamiento'];
+              
             }
             if(isset($_POST['memoria'])){
                $memoria = $_POST['memoria'];
+          
             }
             if(isset($_POST['precio'])){
                $precio = $_POST['precio'];
+          
             }
-            var_dump($tipo);
-            require_once('../models/portatil.php');
-            $lap = new ordenador($tipo);
-            $datos = $this->laptop->getPortatil();
+           
+            
+            
+            $datos = $this->laptop->getPortatil($tipo);
             
             montarTabla::montar($datos);
         }
