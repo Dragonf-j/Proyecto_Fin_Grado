@@ -38,17 +38,23 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
               
             }
             if(isset($_POST['memoria'])){
-               $memoria = $_POST['memoria'];
-          
+               $ram = $_POST['memoria'];
+               
+            }else{
+               return;
             }
             if(isset($_POST['precio'])){
                $precio = $_POST['precio'];
-          
             }
+            if(isset($_POST['Pulgadas'])){
+               $pulgadas = $_POST['Pulgadas'];
+               
+            }
+            
            
             
             
-            $datos = $this->laptop->getPortatil($tipo);
+            $datos = $this->laptop->getPortatil($tipo, $ram, $precio, $pulgadas);
             
             montarTabla::montar($datos);
         }

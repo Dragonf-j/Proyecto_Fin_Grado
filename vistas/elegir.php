@@ -15,25 +15,7 @@
 
 </head>
 <style>
-    .grid {
-        display: grid;
-        grid-template-columns: 45% 45%;
-    }
 
-    #boton {
-        display: inline;
-    }
-
-    .icon span {
-        transition: .4s ease-in-out all;
-        position: absolute;
-        left: 40%;
-
-    }
-
-    .icon:hover span {
-        left: 20px;
-    }
 </style>
 
 <body>
@@ -91,11 +73,8 @@
                     <label for="workstation">Workstation</label>
                     <input type="radio" class="form-check-input" class="tipos" name="tipos" value="workstation">
                     <br>
-                    <label for="ultra">Ultrabook</label>
-                    <input type="radio" class="form-check-input" class="tipos" name="tipos" value="ultra">
-                    <br>
-                    <label for="dosenuno">2 en 1</label>
-                    <input type="radio" class="form-check-input" class="tipos" name="tipos" value="dosenuno">
+                    <label for="Convertible">2 en 1</label>
+                    <input type="radio" class="form-check-input" class="tipos" name="tipos" value="Convertible">
 
                 </div>
 
@@ -123,33 +102,63 @@
                             <path d="M1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707-.293l.353-.353a.5.5 0 0 1 .708 0l.353.353a1 1 0 0 0 .707.293H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1Zm.5 1h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm5 0h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm4.5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4ZM2 10v2H1v-2h1Zm2 0v2H3v-2h1Zm2 0v2H5v-2h1Zm3 0v2H8v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Z" />
                         </svg>
                     </label><br>
-                    <label for="menos">4</label>
-                    <input type="radio" class="form-check-input" name="memoria" value="menos">
+                    <!-- <label for="4">4</label>
+                    <input type="radio" class="form-check-input" name="memoria" value="4">
+                    <br> -->
+                    <label for="8">8</label>
+                    <input type="radio" class="form-check-input" name="memoria" value="8">
                     <br>
-                    <label for="medio">8</label>
-                    <input type="radio" class="form-check-input" name="memoria" value="medio">
+                    <label for="16">16</label>
+                    <input type="radio" class="form-check-input" name="memoria" value="16">
                     <br>
-                    <label for="max">16</label>
-                    <input type="radio" class="form-check-input" name="memoria" value="max">
-                    <br>
-                    <label for="max-extend">32</label>
-                    <input type="radio" class="form-check-input" name="memoria" value="max-extend">
+                    <label for="32">32</label>
+                    <input type="radio" class="form-check-input" name="memoria" value="32">
                 </div>
 
                 <div class="form-check" id="Precio">
-                    <label for="precio">Precio
+                    <label for="precio">Presupuesto
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
                             <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z" />
                         </svg>
                     </label><br>
-                    <label for="barato">Barato</label>
-                    <input type="radio" class="form-check-input" name="precio" value="barato">
+                    <label for="bajo">Bajo</label>
+                    <input type="radio" class="form-check-input" name="precio" value="bajo">
                     <br>
-                    <label for="economico">Economico</label>
-                    <input type="radio" class="form-check-input" name="precio" value="barato">
+                    <label for="moderado">Moderado</label>
+                    <input type="radio" class="form-check-input" name="precio" value="moderado">
                     <br>
-                    <label for="Caro">Lo mas caro</label>
-                    <input type="radio" class="form-check-input" class="form-check-input" name="precio" value="barato">
+                    <label for="elevado">Elevado</label>
+                    <input type="radio" class="form-check-input" class="form-check-input" name="precio" value="elevado">
+                    <br>
+
+                </div>
+                <div class="form-check" id="Pulgadas">
+                    <label for="Pulgadas">Pulgadas
+                        
+                    </label><br>
+                    <label for="pequeño">Pequeño</label>
+                    <input type="radio" class="form-check-input" name="Pulgadas" value="pequeño">
+                    <br>
+                    <label for="medio">Medio</label>
+                    <input type="radio" class="form-check-input" name="Pulgadas" value="medio">
+                    <br>
+                    <label for="grande">Grande</label>
+                    <input type="radio" class="form-check-input" class="form-check-input" name="Pulgadas" value="grande">
+                    <br>
+
+                </div>
+                <div class="form-check" id="hz">
+                    <label for="hz">Hercios
+                        
+                    </label><br>
+                    <label for="estandar">Estandar</label>
+                    <input type="radio" class="form-check-input" name="hz" value="estandar">
+                    <br>
+                    <label for="medio">Competición</label>
+                    <input type="radio" class="form-check-input" name="hz" value="medio">
+                    <br>
+                    <label for="alto">Alta competición</label>
+                    <input type="radio" class="form-check-input" class="form-check-input" name="hz" value="alto">
                     <br>
 
                 </div>
@@ -157,8 +166,7 @@
 
 
 
-        
-                <input type="submit" value="mostrar" name="mostrar">
+                <input class="boton" type="submit" value="mostrar" name="mostrar">
 
 
             </form>
@@ -190,7 +198,7 @@
     <footer class="has-sticky-footer">
         <div>
             <div>
-                <h6>Redes solciales</h6>
+                <h6>Redes sociales</h6>
             </div>
             <div>
                 <h6>About</h6>
@@ -201,5 +209,33 @@
 
     </footer>
 </body>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+    }
+
+    .boton {
+        grid-column: 1 / span 3;
+        grid-row: 4;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: 5px
+    }
+
+    .tabla {
+        border: 1px black solid;
+        padding: 8vh;
+    }
+
+    #boton {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+</style>
 
 </html>

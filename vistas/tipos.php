@@ -272,7 +272,7 @@
     <footer class="has-sticky-footer">
         <div>
             <div>
-                <h6>Redes solciales</h6>
+                <h6>Redes sociales</h6>
             </div>
             <div>
                 <h6>About</h6>
