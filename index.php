@@ -64,17 +64,18 @@
     if(!isset( $_SESSION["usuario"])){
         echo "Vaya paraece que no hay registros";
     }else{
-        ?>
-        <div class="container container-fluid bg-light p-2 ms-auto principal ">
-        <?php
-        require_once('models/portatilesCurd.php');
-        include_once('controlers/Controlers_index/controlador.php');
-        $controlerIndex = new controlerIndex();
-        for ($i = 1; $i <= 6; $i++) {
-            $controlerIndex->ramdon();
-            // echo$i;
-        }
-        ?>
+        // ?>
+         <div class="container container-fluid bg-light p-2 ms-auto principal ">
+         <?php
+        // require_once('models/portatilesCurd.php');
+        // include_once('controlers/Controlers_index/controlador.php');
+        // $controlerIndex = new controlerIndex();
+        // for ($i = 1; $i <= 6; $i++) {
+        //     $controlerIndex->ramdon();
+        //     // echo$i;
+        echo "Hola Usuario: ".$_SESSION['usuario'];
+        // }
+        // ?>
         <?php
       
     }

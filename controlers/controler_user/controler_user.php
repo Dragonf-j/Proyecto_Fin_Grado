@@ -6,7 +6,7 @@ class controler{
 
     public function __construct()
     {
-        require_once("../../models/usuarioCRud.php");
+        require_once("/xampp/htdocs/Dragonf/proyecto/models/usuarioCRud.php");
         $this->user = new userCrud();
       
        
@@ -24,13 +24,13 @@ class controler{
             $contra = $_POST['contra'];
          }
      
-        echo 'echo usuarrios creados';
-        var_dump($nombre);
-        var_dump($contra);
-        var_dump($correo);
+        // echo 'echo usuarios creados';
+        // var_dump($nombre);
+        // var_dump($contra);
+        // var_dump($correo);
         $user = new user($nombre, $correo, $contra);
         var_dump($user);
-        $this->cIn->anadir($user);
+        $this->user->anadir($user);
     }
 
     public function conectar(){
@@ -53,6 +53,7 @@ class controler{
          
     }
 }
+
 
 
 ?>

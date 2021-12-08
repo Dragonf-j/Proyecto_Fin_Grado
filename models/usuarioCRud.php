@@ -8,7 +8,7 @@ class userCrud
     private $password;
     private $consulta;
     private $nameDB;
-
+    private $user;
 
 
 
@@ -37,7 +37,7 @@ class userCrud
             $this->conexion = new PDO($dsn, $this->users, $this->password); //conexion 
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //extraccion y formateo de datos
             // echo 'Conexión Realizada';
-           
+            $this->user=[];
 
 
         } catch (PDOException $exp) {
@@ -49,7 +49,7 @@ class userCrud
     public function anadir(user $usuario)
     {
         try {
-            $s = 'INSERT INTO usuarios VALUES (:nombre, :Email, :Pass)';
+            $s = 'INSERT INTO user VALUES (:nombre, :Email, :Pass)';
             
             $this->consulta = $this->conexion->prepare($s);
             $this->consulta->execute(
@@ -68,12 +68,12 @@ class userCrud
 
      public function InicioSesion($correo, $pass){
         try{
-            $sentencia="SELECT nombre FROM usuarios WHERE (Email ='$correo') AND (Pass= '$pass')";
+            $sentencia="SELECT nombre FROM user WHERE (Email ='$correo') AND (Pass= '$pass')";
             $this->consulta = $this->conexion->prepare($sentencia);
             // echo 'Consulta realizada';
             // echo '<br>';
             $this->consulta->execute();
-            $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
+            $this->user=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
 
             $numero_registro = $this->consulta->rowCount();
 
@@ -82,9 +82,10 @@ class userCrud
                 $_SESSION["usuario"]=$correo;
                 var_dump($_SESSION["usuario"]);
                 echo "El usuario existe";
-                return $this->portatiles;
+                return $this->user;
             }else{
-                header("Location:../inicio.php");
+                echo "El usuario no existe";
+                header("Location: ../vistas/loging.php");
             }
             
         }catch(PDOException $e){
