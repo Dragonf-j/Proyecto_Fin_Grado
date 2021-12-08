@@ -120,7 +120,8 @@ class PortatilCrud
                 $this->portatiles = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
 
                 return $this->portatiles;
-            
+             
+                //  echo "aleatorio ".$numero."<br>";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

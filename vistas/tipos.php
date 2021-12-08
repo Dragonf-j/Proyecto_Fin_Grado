@@ -12,19 +12,17 @@
     <link href="../estilos/estilos.css" rel="stylesheet">
 
 
-    <style>
-        .content {
-            margin: 2vh 2vh 2vh 2vh;
 
-        }
-    </style>
 </head>
 
 <body>
     <header id="header" class="container-fluid cabecera ">
 
-        <h1>Elige tu portatil</h1>
-
+        <h1>Elige tu portátil</h1>
+        <div>
+            <a href="loging.php">Inicia sesion</a>
+            <a href="registrar.php">Registrate</a>
+        </div>
         <nav class="navbar navbar-expand-sm  navbar-dark">
             <div class="container-fluid">
 
@@ -46,7 +44,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
                                     <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
                                 </svg>
-                                Tipos portatiles
+                                Tipos portátiles
                             </a>
                         </li>
                         <li class="nav-item">
@@ -54,7 +52,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
-                                Elige tu portatil</a>
+                                Elige tu portátil</a>
                         </li>
                     </ul>
                 </div>
@@ -107,39 +105,30 @@
                 </nav>
             </div>
             <!-- <div class="content"> -->
-            <div class="mb-1">
+            <div  id="gaming" class="mb-1 contenedores">
+            
 
-                <h3 id="gaming"> Gaming</h3>
+                <h3 > Gaming</h3>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    v
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
+                    Un <span>portátil gaming</span> es un tipo de portátil destinado de forma casi exclusiva para jugar a videojuegos. Este tipo de portatiles
+                    posee un hardware con espeficico para juegos. Como una tarjeta grafica que sea capaz de sacar una gran cantidad de FPS (fotogramas por segundo),
+                    o una pantalla con elevados Hercios para que muestren los FPS generados.
+                    <br>
 
+                    <br>
+
+                    Este tipo de portatiles podemos encontrar diferentes configuraciones, puedemos escoger un equipo con un presusupuesto reducido
+                    que dispondra de una configuracion de hahrdware menor pero con el que podremos jugar a juegos menos exigetnes o juegos competitivos
+                    que consumen pocos recuros como por ejemplo:
+                <ul>
+                    <li>LOL (League of legend)</li>
+                    <li>Valorant</li>
+                    <li>Fortnite</li>
+                    <li>Counter Strike Global Offensive</li>
+                </ul>
+                Igualemnte podemos econtrar equipos con mejor hardware capaces de ejucutar los juegos triple A mas exigentes del mercado, 
+                claro esta que para obtener esta mejroa de hardware deberemos hacer una inversión aun mayor
                 </p>
                 <a class="nav-link" href="#header">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
@@ -281,5 +270,11 @@
 
     </footer>
 </body>
+<style>
+        
+        .contenedores{
+            margin-top: 5vh;   
 
+        }
+    </style>
 </html>
