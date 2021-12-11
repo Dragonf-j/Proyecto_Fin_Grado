@@ -49,7 +49,7 @@ class userCrud
     public function anadir(user $usuario)
     {
         try {
-            $s = 'INSERT INTO user VALUES (:nombre, :Email, :Pass, :Historico)';
+            $s = 'INSERT INTO user VALUES (:nombre, :Email, :Pass)';
             
             $this->consulta = $this->conexion->prepare($s);
             $this->consulta->execute(
@@ -57,7 +57,7 @@ class userCrud
                     ':nombre' => $usuario->getnombre(),
                     ':Email' => $usuario->getemail(),
                     ':Pass' => $usuario->getpass(),
-                    'Historico'=>$usuario->getHistory()
+                    
                     
                 )
             );

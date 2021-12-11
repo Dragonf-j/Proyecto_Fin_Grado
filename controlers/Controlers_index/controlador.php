@@ -21,11 +21,6 @@ class controlerIndex{
         
     }
 
-    public function historico(){
-      
-        // $dadtos = $this->cInH->historico();
-        // montarTabla::montarIndex($dadtos);
-    }
 
 
 }

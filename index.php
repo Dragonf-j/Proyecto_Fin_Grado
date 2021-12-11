@@ -78,7 +78,10 @@
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
             <?php
             
-            echo "Hola Usuario: " . $_SESSION['usuario'];
+            echo "Hola Usuario: " . $_SESSION['usuario']."<br>";
+            echo '<button type="submit">';
+            echo '<a href="vistas/destruir.php">Desconectar</a>';
+            echo '</button>';
             require_once('models/model_laptop_user/userLapCrud.php');
             $ulc = new userLapCrud();
             $datos = $ulc->mostrar();
@@ -88,9 +91,7 @@
             }else{
                 montarTabla::montarIndex($datos);
             }
-            echo '<button type="submit">';
-            echo '<a href="vistas/destruir.php">Desconectar</a>';
-            echo '</button>';
+            
 
     }
             
