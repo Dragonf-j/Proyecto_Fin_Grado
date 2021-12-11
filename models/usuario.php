@@ -4,6 +4,7 @@ class user{
     protected $nombre;
     protected $email;
     protected $pass;
+   
  
 
     /**
@@ -14,6 +15,7 @@ class user{
        $this->nombre= $nombre;
        $this->email= $email;
        $this->pass= $pass;
+    //    $this->historico=$historico;
     }
      
     /**
@@ -31,6 +33,9 @@ class user{
         return $this->pass;
     }
 
+    // public function getHistory(){
+    //     return $this->historico;
+    // }
  
 
 
@@ -48,5 +53,6 @@ class user{
     public function setpass($pass){
         $this->pass= $pass;
     }
+   
 }
 ?>

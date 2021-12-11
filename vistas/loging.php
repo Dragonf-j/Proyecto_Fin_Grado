@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container-fluid cabecera">
+    <div class="container cabecera">
         <?php
         require('../controlers/controler_user/controler_user.php');
         $cUser = new controler();
@@ -20,6 +20,7 @@
             $cUser->conectar();
         }
         ?>
+
         <h1>Inicia Sesion</h1>
 
 
@@ -29,9 +30,11 @@
         <form action="" method="post">
 
             <label for="email">Email</label>
+            <br>
             <input type="email" name="correo" id="correo">
             <br>
             <labbel for="contra">Contraseña</labbel>
+            <br>
             <input type="password" name="contra" id="contra">
             <br>
             <input type="submit" value="Enviar" name="enviar">
@@ -53,6 +56,12 @@
     </div>
 </body>
 <style>
+    div {
+        align-items: center;
+        justify-content: center;
+     
+    }
+
     h1 {
         border-bottom: 1px grey solid;
         text-align: center;
@@ -68,10 +77,14 @@
     }
 
     form {
+        
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
         margin-bottom: 0px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
     p {
@@ -86,7 +99,7 @@
 
     label {
         padding: 10px;
-        border: 1px grey solid;
+
     }
 </style>
 

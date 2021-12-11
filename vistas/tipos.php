@@ -19,10 +19,7 @@
     <header id="header" class="container-fluid cabecera ">
 
         <h1>Elige tu portátil</h1>
-        <div>
-            <a href="loging.php">Inicia sesion</a>
-            <a href="registrar.php">Registrate</a>
-        </div>
+
         <nav class="navbar navbar-expand-sm  navbar-dark">
             <div class="container-fluid">
 
@@ -55,6 +52,10 @@
                                 Elige tu portátil</a>
                         </li>
                     </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <a href="loging.php">Inicia sesion</a>
+                    <a href="registrar.php">Registrate</a>
                 </div>
             </div>
         </nav>
@@ -105,10 +106,10 @@
                 </nav>
             </div>
             <!-- <div class="content"> -->
-            <div  id="gaming" class="mb-1 contenedores">
-            
+            <div id="gaming" class="mb-1 contenedores">
 
-                <h3 > Gaming</h3>
+
+                <h3> Gaming</h3>
 
                 <p>
                     Un <span>portátil gaming</span> es un tipo de portátil destinado de forma casi exclusiva para jugar a videojuegos. Este tipo de portatiles
@@ -127,7 +128,7 @@
                     <li>Fortnite</li>
                     <li>Counter Strike Global Offensive</li>
                 </ul>
-                Igualemnte podemos econtrar equipos con mejor hardware capaces de ejucutar los juegos triple A mas exigentes del mercado, 
+                Igualemnte podemos econtrar equipos con mejor hardware capaces de ejucutar los juegos triple A mas exigentes del mercado,
                 claro esta que para obtener esta mejroa de hardware deberemos hacer una inversión aun mayor
                 </p>
                 <a class="nav-link" href="#header">
@@ -271,10 +272,12 @@
     </footer>
 </body>
 <style>
-        
-        .contenedores{
-            margin-top: 5vh;   
+    .contenedores {
+        margin-top: 5vh;
 
-        }
-    </style>
+    }
+
+    
+</style>
+
 </html>

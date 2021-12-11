@@ -15,76 +15,84 @@
 
 <body>
     <div class="cabecera">
-    <?php
-    require('../controlers/controler_user/controler_user.php');
-   
-    $cUser = new controler();
-    if (isset($_POST['enviar'])) {
-        $cUser->registrar();
-    }
-    ?>
-    <h1>Inicia Sesion</h1>
+        <?php
+        require('../controlers/controler_user/controler_user.php');
 
-<nav class="navbar navbar-expand-sm  navbar-dark">
-    <div class="container-fluid">
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <p>
-                        Vovler a la página de
-                        <a href="../index.php" >
-                            inicio
-                        </a>
-                    </p>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
+        $cUser = new controler();
+        if (isset($_POST['enviar'])) {
+            $cUser->registrar();
+        }
+        ?>
+        <h1>Crear cuenta</h1>
 
 
-    <form action="" method="post">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
-        <br>
-        <label for="email">Email</label>
-        <input type="email" name="correo" id="correo">
-        <br>
-        <labbel for="contra">Contraseña</labbel>
-        <input type="password" name="contra" id="contra">
-        <br>
-        <input type="submit" value="Enviar" name="enviar">
-    </form>
-    <p>
-        Si ya tienes cuenta inicicia sesion aqui
-    <a href="loging.php">Login</a>
-    </p>
-    
+
+
+        <form action="" method="post">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" name="nombre" id="nombre">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="correo" id="correo">
+            <br>
+            <labbel for="contra">Contraseña</labbel>
+            <br>
+            <input type="password" name="contra" id="contra">
+            <br>
+            <input type="submit" value="Enviar" name="enviar">
+        </form>
+
+        <p>
+            Si ya tienes cuenta inicicia sesion aqui
+            <a href="loging.php">Login</a>
+        </p>
+        <p>
+            Vovler a la página de
+            <a href="../index.php">
+                inicio
+            </a>
+        </p>
+
     </div>
 </body>
 <style>
    h1 {
         border-bottom: 1px grey solid;
         text-align: center;
+
     }
 
     .cabecera {
         border: 1px grey solid;
         border-radius: 5px;
         margin-top: 50px;
-        
 
+
+    }
+
+    form {
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 10px;
+        margin-left: 50px;
     }
 
     body {
         background-color: rgb(34, 34, 34);
         color: rgb(223, 223, 223);
     }
-    
+
+    label {
+        padding: 10px;
+   
+    }
 </style>
+
 </html>

@@ -16,16 +16,14 @@
     <header class="container-fluid cabecera">
 
         <h1>Elige tu portátil</h1>
-        <div>
-            <a href="vistas/loging.php">Inicia sesion</a>
-            <a href="vistas/registrar.php">Registrate</a>
-        </div>
+
         <nav class="navbar navbar-expand-sm  navbar-dark">
             <div class="container-fluid">
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -52,41 +50,58 @@
                         </li>
                     </ul>
                 </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <a href="vistas/loging.php">Inicia sesion</a>
+                    <a href="vistas/registrar.php">Registrate</a>
+                </div>
+                
             </div>
         </nav>
-       
+
 
     </header>
 
     <?php
     session_start();
 
-    if(!isset( $_SESSION["usuario"])){
-        echo "Vaya paraece que no hay registros";
-    }else{
-        // ?>
-         <div class="container container-fluid bg-light p-2 ms-auto principal ">
-         <?php
-        // require_once('models/portatilesCurd.php');
-        // include_once('controlers/Controlers_index/controlador.php');
-        // $controlerIndex = new controlerIndex();
-        // for ($i = 1; $i <= 6; $i++) {
-        //     $controlerIndex->ramdon();
-        //     // echo$i;
-        echo "Hola Usuario: ".$_SESSION['usuario'];
-        // }
-        // ?>
+    if (!isset($_SESSION["usuario"])) {
+        ?>
+        <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
+            <h2 class="h2">Vaya paraece que no hay Registros</h2>
+
+        </div>
         <?php
-      
-    }
-    
-    
+       
+    } else {
+        // 
     ?>
+        <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
+            <?php
+            // require_once('models/portatilesCurd.php');
+            // include_once('controlers/Controlers_index/controlador.php');
+            // $controlerIndex = new controlerIndex();
+            // for ($i = 1; $i <= 6; $i++) {
+            //     $controlerIndex->ramdon();
+            //     // echo$i;
+            echo "Hola Usuario: " . $_SESSION['usuario'];
+            // }
+           
+            // 
+           
+
+    }
+            echo '<button type="submit">';
+            echo '<a href="vistas/destruir.php">Desconectar</a>';
+            echo '</button>';
+        ?>
+
+        
+
+            
     
 
-
-    </div>
-    <footer class=" has-sticky-footer">
+        </div>
+        <footer class="has-sticky-footer">
         <div>
             <div>
                 <h6>Redes sociales</h6>
@@ -95,14 +110,16 @@
                 <h6>About</h6>
             </div>
         </div>
-
-    </footer>
+       
 </body>
 <style>
+
     .principal {
-        display: grid;
+        /* display: grid;
         grid-template-columns: 33% 33% 33%;
-        grid-column-gap: 5px
+        grid-column-gap: 5px; */
+
+        /* height: 100vh; */
     }
 
     .tabla {
@@ -110,6 +127,20 @@
         padding: 8vh;
 
     }
+    h2 {
+        
+        border-bottom: 1px black solid;
+        height: 5vh;
+        text-align: center;
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    
+    /* footer{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    } */
 </style>
 
 </html>

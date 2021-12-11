@@ -4,62 +4,39 @@ class montarTabla
 {
     public static function montarIndex($datos)
     {
-
-        foreach ($datos as $key => $value) {
-            $nombre = $value['nombre'];
-            $img = $value["imagen"];
-            $tipo = $value['tipo'];
-            $ram = $value['ram'];
-            $enlaceA = $value['enlace_amazon'];
-            $precioa = $value['precio_amazon'];
-            // $enlacePc = $value['enlace_pccomponetes'];
-            // $preciop = $value['precio_pcpcomponentes'];
-            $almacenamiento = $value['almacenamiento'];
-
-
 ?>
 
-            <div class="">
-                <table class="tabla ">
-                    <tr>
-                        <th>
-                            <h3 class="container bg-light p-2 ms-auto h3"><?php echo $nombre; ?></h3>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <h5>
-                                <?php echo $tipo; ?>
-                            </h5>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <p>Memoria RAM: <?php echo $ram; ?>GB</p>
-                        </th>
-                    </tr>
-                    <tr>
-                    <th>
-                        <p>ALmacenamiento en disco: <?php echo $almacenamiento; ?></p>
-                    </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="img">
-                                <img class="img-responsive img-thumbnail" src="img/<?php echo $img; ?>" alt="img" >
-                            </div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <button class="btn btn-outline-secondary">
-                                <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
-                                <p><?php echo $precioa; ?>€</p>
-                            </button>
-                        </th>
-                    </tr>
-                </table>
+            <div class="thumbnail">
+                <?php
+                foreach ($datos as $key => $value) {
 
+
+                    if ($key == 0) {
+
+                        echo '<table>';
+                        echo '<tr>';
+
+
+                        foreach ($value as $k1 => $v1) {
+
+                            echo '<th>';
+                            echo $k1;
+                            echo '</th>';
+                        }
+                        echo '</tr>';
+                    }
+
+                    echo '<tr>';
+
+                    foreach ($value as $k1 => $v1) {
+
+                        echo '<td>';
+                        echo $v1;
+                        echo '</td>';
+                    }
+                    echo '</tr>';
+                }
+                ?>
 
 
 
@@ -68,7 +45,7 @@ class montarTabla
             </div>
 
         <?php
-        }
+        
     }
 
     public static function montar($datos)

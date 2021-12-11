@@ -22,10 +22,10 @@
     <header class="container-fluid cabecera">
 
         <h1>Elige tu portátil</h1>
-        <div>
+        <!-- <div>
             <a href="loging.php">Inicia sesion</a>
             <a href="registrar.php">Registrate</a>
-        </div>
+        </div> -->
         <nav class="navbar navbar-expand-sm  navbar-dark">
             <div class="container-fluid">
 
@@ -57,6 +57,10 @@
                                 Elige tu portátil</a>
                         </li>
                     </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <a href="loging.php">Inicia sesion</a>
+                    <a href="registrar.php">Registrate</a>
                 </div>
             </div>
         </nav>
@@ -180,7 +184,7 @@
 
         </div>
 
-        <div class="container bg-light p-2 ms-auto principal">
+        <div class="container bg-light p-2 ms-auto principal thumbnail">
 
             <?php
             require_once('../controlers/controlador.php');
@@ -225,11 +229,11 @@
         grid-row: 4;
     }
 
-    .principal {
+    /* .principal {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         grid-column-gap: 5px
-    }
+    } */
 
     .tabla {
         border: 1px black solid;

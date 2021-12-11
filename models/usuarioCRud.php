@@ -56,7 +56,8 @@ class userCrud
                 array(
                     ':nombre' => $usuario->getnombre(),
                     ':Email' => $usuario->getemail(),
-                    ':Pass' => $usuario->getpass()
+                    ':Pass' => $usuario->getpass(),
+                    
                 )
             );
            
@@ -69,6 +70,7 @@ class userCrud
      public function InicioSesion($correo, $pass){
         try{
             $sentencia="SELECT nombre FROM user WHERE (Email ='$correo') AND (Pass= '$pass')";
+
             $this->consulta = $this->conexion->prepare($sentencia);
             // echo 'Consulta realizada';
             // echo '<br>';
@@ -85,12 +87,14 @@ class userCrud
                 return $this->user;
             }else{
                 echo "El usuario no existe";
-                header("Location: ../vistas/loging.php");
+                header("Location:../vistas/loging.php");
             }
             
         }catch(PDOException $e){
             echo $e->getMessage();
         }
 }
+  
+
 }
 ?>

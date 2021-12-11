@@ -23,8 +23,9 @@ class controler{
          if(isset($_POST['contra'])){
             $contra = $_POST['contra'];
          }
-     
-        // echo 'echo usuarios creados';
+        
+         
+         echo 'echo usuarios creados';
         // var_dump($nombre);
         // var_dump($contra);
         // var_dump($correo);
@@ -47,11 +48,10 @@ class controler{
          foreach ($datos as $key => $value) {
             $nombre = $value['nombre'];
         }
-
-        
-        
-         
+  
     }
+
+   
 }
 
 
