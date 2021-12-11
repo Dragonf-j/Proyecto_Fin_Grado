@@ -67,8 +67,8 @@
     if (!isset($_SESSION["usuario"])) {
         ?>
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
-            <h2 class="h2">Vaya paraece que no hay Registros</h2>
-
+            <h2 class="h2">Vaya parece que no hay Registros</h2>
+        <!-- <img src="img/gif/PowerlessFlippantGenet-size_restricted.gif"  class="img-responsive img-thumbnail" alt=""> -->
         </div>
         <?php
        
@@ -77,22 +77,23 @@
     ?>
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
             <?php
-            // require_once('models/portatilesCurd.php');
-            // include_once('controlers/Controlers_index/controlador.php');
-            // $controlerIndex = new controlerIndex();
-            // for ($i = 1; $i <= 6; $i++) {
-            //     $controlerIndex->ramdon();
-            //     // echo$i;
+            
             echo "Hola Usuario: " . $_SESSION['usuario'];
-            // }
-           
-            // 
-           
-
-    }
+            require_once('models/model_laptop_user/userLapCrud.php');
+            $ulc = new userLapCrud();
+            $datos = $ulc->mostrar();
+            var_dump($datos);
+            if($datos == null){
+                echo 'Mensaje de prueba <br>';
+            }else{
+                montarTabla::montarIndex($datos);
+            }
             echo '<button type="submit">';
             echo '<a href="vistas/destruir.php">Desconectar</a>';
             echo '</button>';
+
+    }
+            
         ?>
 
         
@@ -110,17 +111,11 @@
                 <h6>About</h6>
             </div>
         </div>
-       
+        </footer>
 </body>
 <style>
 
-    .principal {
-        /* display: grid;
-        grid-template-columns: 33% 33% 33%;
-        grid-column-gap: 5px; */
-
-        /* height: 100vh; */
-    }
+    
 
     .tabla {
 
@@ -141,6 +136,9 @@
         position: fixed;
         width: 100%;
     } */
+    img{
+        width: 100%;
+    }
 </style>
 
 </html>

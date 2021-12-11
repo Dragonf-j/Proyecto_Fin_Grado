@@ -36,6 +36,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
             if(isset($_POST['almacenamiento'])){
                $almacenamiento = $_POST['almacenamiento'];
               
+            }else{
+               return;
             }
             if(isset($_POST['memoria'])){
                $ram = $_POST['memoria'];
@@ -45,10 +47,14 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
             }
             if(isset($_POST['precio'])){
                $precio = $_POST['precio'];
+            }else{
+               return;
             }
             if(isset($_POST['Pulgadas'])){
                $pulgadas = $_POST['Pulgadas'];
                
+            }else{
+               return;
             }
             
            

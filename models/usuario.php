@@ -4,18 +4,18 @@ class user{
     protected $nombre;
     protected $email;
     protected $pass;
-   
+    protected $historico;
  
 
     /**
      * Constructor de la clase
      */
-    public function __construct($nombre, $email, $pass)
+    public function __construct($nombre, $email, $pass,$historico)
     {
        $this->nombre= $nombre;
        $this->email= $email;
        $this->pass= $pass;
-    //    $this->historico=$historico;
+       $this->historico=$historico;
     }
      
     /**
@@ -33,9 +33,9 @@ class user{
         return $this->pass;
     }
 
-    // public function getHistory(){
-    //     return $this->historico;
-    // }
+    public function getHistory(){
+        return $this->historico;
+    }
  
 
 
@@ -54,5 +54,8 @@ class user{
         $this->pass= $pass;
     }
    
+    public function setHistory($historico){
+        $this->historico = $historico;
+    }
 }
 ?>

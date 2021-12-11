@@ -74,7 +74,7 @@ class montarTabla
                 <?php
                 ?>
                 <p>ALmacenamiento en disco: <?php echo $almacenamiento; ?></p>
-                <img class="img-responsive img-thumbnail" src="../img/<?php echo $img; ?>" alt="img">
+                <img class="img-responsive img-thumbnail est" src="../img/<?php echo $img; ?>" alt="img">
                 <?php echo '<br>'; ?>
                 <button class="btn btn-outline-secondary">
                     <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
@@ -88,3 +88,9 @@ class montarTabla
     }
 }
 ?>
+<style>
+    .est{
+        align-items: center;
+        justify-content: center;
+    }
+</style>

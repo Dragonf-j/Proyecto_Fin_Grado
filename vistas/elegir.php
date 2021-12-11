@@ -70,6 +70,7 @@
     <div>
         <div class="container bg-light d-flex flex-column justify-content-around ">
             <form action="" method="POST" class="grid">
+                
                 <div class="form-check " id="tipos">
                     <label for="Tipo">Tipos de portatiles</label><br>
                     <label for="gaming">Gaming</label>
@@ -227,6 +228,9 @@
     .boton {
         grid-column: 1 / span 3;
         grid-row: 4;
+        width: 20%;
+        align-items: center;
+        border-top: 1px solid grey;
     }
 
     /* .principal {
@@ -239,10 +243,16 @@
         border: 1px black solid;
         padding: 8vh;
     }
+    /* footer{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    } */
 
     #boton {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 20%;
+
     }
 </style>
 

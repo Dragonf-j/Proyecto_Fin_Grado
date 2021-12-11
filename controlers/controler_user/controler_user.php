@@ -23,13 +23,14 @@ class controler{
          if(isset($_POST['contra'])){
             $contra = $_POST['contra'];
          }
-        
-         
+         $dt = new DateTime();
+         $dg = $dt->getTimestamp();
+         echo $dg;
          echo 'echo usuarios creados';
         // var_dump($nombre);
         // var_dump($contra);
         // var_dump($correo);
-        $user = new user($nombre, $correo, $contra);
+        $user = new user($nombre, $correo, $contra, $dg);
         var_dump($user);
         $this->user->anadir($user);
     }

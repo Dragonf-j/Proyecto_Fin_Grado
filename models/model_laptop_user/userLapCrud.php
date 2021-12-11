@@ -1,14 +1,13 @@
 <?php
-require('usuario.php');
-class userCrud
-{
+require_once('lap_user.php');
+class userLapCrud{
     private $conexion;
     private $host;
     private $users;
     private $password;
     private $consulta;
     private $nameDB;
-    private $user;
+    private $userLap;
 
 
 
@@ -37,7 +36,7 @@ class userCrud
             $this->conexion = new PDO($dsn, $this->users, $this->password); //conexion 
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //extraccion y formateo de datos
             // echo 'Conexión Realizada';
-            $this->user=[];
+            $this->userlap=[];
 
 
         } catch (PDOException $exp) {
@@ -45,60 +44,40 @@ class userCrud
         }
     }
 
-   
-    public function anadir(user $usuario)
-    {
-        try {
-            $s = 'INSERT INTO user VALUES (:nombre, :Email, :Pass, :Historico)';
-            
-            $this->consulta = $this->conexion->prepare($s);
+
+
+    public function anadir(){
+
+        try{
+            $sentancia = 'INSERT INTO portatiles_has_user VALUES(:id_user, id_portatil)';
+
+            $this->consulta = $this->conexion->prepare($sentancia);
             $this->consulta->execute(
                 array(
-                    ':nombre' => $usuario->getnombre(),
-                    ':Email' => $usuario->getemail(),
-                    ':Pass' => $usuario->getpass(),
-                    'Historico'=>$usuario->getHistory()
-                    
+                    ':id_user'=> '',
+                    ':id_portatil'=>''
                 )
             );
-            header('Location:../index.php');
-           
-        } catch (PDOException $e) {
 
+        }catch(PDOException $e){
             exit($e->getMessage());
         }
     }
 
-     public function InicioSesion($correo, $pass){
+    public function mostrar(){
         try{
-            $sentencia="SELECT nombre FROM user WHERE (Email ='$correo') AND (Pass= '$pass')";
-
-            $this->consulta = $this->conexion->prepare($sentencia);
-            // echo 'Consulta realizada';
-            // echo '<br>';
+            $sentancia = 'SELECT id_user, id_portatil, historico FROM portatiles_has_user';
+            $this->consulta = $this->conexion->prepare($sentancia);
             $this->consulta->execute();
-            $this->user=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
-
-            $numero_registro = $this->consulta->rowCount();
-            
-            if($numero_registro!=0){
-                session_start();
-                $_SESSION["usuario"]=$correo;
-                header('Location:../index.php');
-                return $this->user;
-               
-            }else{
-                
-                header("Location:../vistas/loging.php");
-
-                
-            }
-            
+            $this->userLap=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
+            return $this->userLap;
         }catch(PDOException $e){
-            echo $e->getMessage();
+            exit($e->getMessage());
         }
-}
-  
+    }
+
+
+
 
 }
 ?>
