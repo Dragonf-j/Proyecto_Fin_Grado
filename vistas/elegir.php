@@ -190,14 +190,14 @@
             <?php
             require_once('../controlers/controlador.php');
             $cLaptop = new ControladorPortatil();
-            // var_dump($cLaptop->mostrar());
+            var_dump($cLaptop->mostrar());
 
 
-            // if(isset($_POST['mostrar'])){
+            if(isset($_POST['mostrar'])){
                
-            //    $cLaptop->mostrar();
+               $cLaptop->mostrar();
               
-            //   }
+              }
 
             ?>
 

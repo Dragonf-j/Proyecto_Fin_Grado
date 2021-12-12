@@ -20,7 +20,7 @@ class controler{
 
 
     public function rergistrar(){
-        // session_start();
+        session_start();
       
          $user= $_SESSION["usuario"];
          if(!isset($user)){

@@ -67,12 +67,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamica
             // montarTabla::montar($datos);
         }
 
-        public function registrar(){
-           session_start();
-         $cLaptop = new ControladorPortatil();
-           $datos = $cLaptop->mostrar();
-            montarTabla::montarIndex($datos);
-        }
+      
 
 
 
@@ -100,7 +95,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamica
       $d = $cLaptop->mostrar();
       montarTabla::montar($d);
     }
-    $cLaptop->registrar();
+    
 
 
     
