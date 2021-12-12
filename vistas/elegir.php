@@ -190,14 +190,13 @@
             <?php
             require_once('../controlers/controlador.php');
             $cLaptop = new ControladorPortatil();
-            include_once('../controlers/Controlers_index/controlador.php');
-            $controlerIndex = new controlerIndex();
-
+            // var_dump($cLaptop->mostrar());
 
 
             // if(isset($_POST['mostrar'])){
-            //     echo 'El boton funciona';
-            //     $datos=  $cLaptop->mostrar();
+               
+            //    $cLaptop->mostrar();
+              
             //   }
 
             ?>

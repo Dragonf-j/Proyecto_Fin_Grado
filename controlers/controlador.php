@@ -1,5 +1,6 @@
 <?php
-require_once('../vistas/Vistas_dinamicas/montarTabla.php');
+// require_once('../vistas/Vistas_dinamicas/montarTabla.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamicas/montarTabla.php');
 /**
  * clase que controla el funcionamiento entre la web y la base de datos
  */
@@ -11,7 +12,8 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
  */
      public function __construct()
      {
-        require_once('../models/portatilesCurd.php');
+      //   require_once('../models/portatilesCurd.php');
+      require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/models/portatilesCurd.php');
         $this->laptop = new PortatilCrud();
      }
 
@@ -36,8 +38,6 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
             if(isset($_POST['almacenamiento'])){
                $almacenamiento = $_POST['almacenamiento'];
               
-            }else{
-               return;
             }
             if(isset($_POST['memoria'])){
                $ram = $_POST['memoria'];
@@ -56,14 +56,24 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
             }else{
                return;
             }
-            
+           
            
             
             
             $datos = $this->laptop->getPortatil($tipo, $ram, $precio, $pulgadas);
-            
-            montarTabla::montar($datos);
+            // var_dump($datos);
+         return $datos;
+        
+            // montarTabla::montar($datos);
         }
+
+        public function registrar(){
+           session_start();
+         $cLaptop = new ControladorPortatil();
+           $datos = $cLaptop->mostrar();
+            montarTabla::montarIndex($datos);
+        }
+
 
 
      public function act($nombre_imagen){
@@ -72,11 +82,13 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
         
 
      }
-    
+     
+     
+  }
      
 
 
-    }
+    
 
     $cLaptop = new ControladorPortatil();
 
@@ -85,8 +97,10 @@ require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 
     if(isset($_POST['mostrar'])){
       // $cLaptop->random();
-      $cLaptop->mostrar();
+      $d = $cLaptop->mostrar();
+      montarTabla::montar($d);
     }
+    $cLaptop->registrar();
 
 
     

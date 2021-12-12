@@ -82,6 +82,9 @@
             echo '<button type="submit">';
             echo '<a href="vistas/destruir.php">Desconectar</a>';
             echo '</button>';
+            echo "<br>";
+          
+           
             require_once('models/model_laptop_user/userLapCrud.php');
             $ulc = new userLapCrud();
             $datos = $ulc->mostrar();

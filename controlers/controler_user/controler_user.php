@@ -6,7 +6,7 @@ class controler{
 
     public function __construct()
     {
-        require_once("/xampp/htdocs/Dragonf/proyecto/models/usuarioCRud.php");
+        require_once($_SERVER['DOCUMENT_ROOT']."/Dragonf/proyecto/models/usuarioCRud.php");
         $this->user = new userCrud();
       
        

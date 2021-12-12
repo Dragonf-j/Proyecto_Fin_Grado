@@ -47,21 +47,21 @@ class PortatilCrud
         }
     }
 
-    // public function getPortatil(){
-    //     try{
-    //         $sentencia='SELECT * FROM portatil';
-    //         $this->consulta = $this->conexion->prepare($sentencia);
-    //         // echo 'Consulta realizada';
-    //         // echo '<br>';
-    //         $this->consulta->execute();
-    //         $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
-    //         //var_dump($this->portatiles);
-    //         return $this->portatiles;
-    //     }catch(PDOException $e){
-    //         echo $e->getMessage();
-    //     }
+    public function getPortatil2(){
+        try{
+            $sentencia='SELECT id FROM portatil';
+            $this->consulta = $this->conexion->prepare($sentencia);
+            // echo 'Consulta realizada';
+            // echo '<br>';
+            $this->consulta->execute();
+            $this->portatiles=$this->consulta->fetchAll(PDO::FETCH_ASSOC);
+            //var_dump($this->portatiles);
+            return $this->portatiles;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
 
-
+    }
 
     // }
     public function getPortatil($tipo, $ram, $precio, $pulgadas)
@@ -107,7 +107,7 @@ class PortatilCrud
             $this->consulta->execute();
             $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
 
-            require_once('/xampp/htdocs/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
+            require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
             
             $r = contar::rercorrer($datos);
        
