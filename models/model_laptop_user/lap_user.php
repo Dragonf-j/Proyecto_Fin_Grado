@@ -3,10 +3,10 @@ class laptopuser{
     protected $idUser;
     protected $idlaptop;
 
-    public function __construct($idlaptop, $idUser)
+    public function __construct( $idUser)
     {
         $this->idUser= $idUser;
-        $this->idlaptop=$idlaptop;
+        // $this->idlaptop=$idlaptop;
     }
 
     public function getIDUSer(){

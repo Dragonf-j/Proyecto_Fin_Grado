@@ -11,11 +11,12 @@ class controler{
     {
         require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/models/model_laptop_user/userLapCrud.php');
         $this->lapUser = new userLapCrud();
-        require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/controlers/controlador.php'); 
-      
-        $this->lap = new ControladorPortatil;
-      
-       
+        // require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/models/portatilesCurd.php');
+        // // require_once('/xampp/htdocs/Dragonf/proyecto/models/portatilesCurd.php'); 
+        // $this->lap = new PortatilCrud();
+        // require_once('/xampp/htdocs/Dragonf/proyecto/controlers/controlador.php');
+        require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/controlers/controlador.php');
+        $this->lap = new ControladorPortatil();
     }
 
 
@@ -27,10 +28,14 @@ class controler{
             echo "sin usuarios";
          }else{
            echo $user;
-           $datos=  $this->lap->mostrar();
-           var_dump($this->lap->mostrar());
+            
+        //    $datos=  $this->lap->getPortatil2();
+        $datos=  $this->lap->mostrar();
+        var_dump($datos);
+        //    var_dump($this->lap->getPortatil2());
              montarTabla::montarIndex($datos);
-
+           
+            
          }
        
     }
