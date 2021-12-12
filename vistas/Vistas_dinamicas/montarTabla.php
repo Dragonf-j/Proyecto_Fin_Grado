@@ -86,6 +86,17 @@ class montarTabla
 <?php
         }
     }
+
+    public static function montar2()
+    {
+        require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/controlers/controlador.php');
+        $lap = new ControladorPortatil();
+        $datos = $lap->mostrar();
+        foreach ($datos as $key => $value) {
+            $id = $value['id'];
+        }
+    }
+    
 }
 ?>
 <style>
