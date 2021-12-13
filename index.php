@@ -88,7 +88,8 @@
             require_once('models/model_laptop_user/userLapCrud.php');
             $ulc = new userLapCrud();
             $datos = $ulc->mostrar();
-            var_dump($datos);
+            require_once('vistas/Vistas_dinamicas/montarTabla.php');
+            // var_dump($datos);
             if($datos == null){
                 echo 'Mensaje de prueba <br>';
             }else{
@@ -97,6 +98,7 @@
             
 
     }
+    echo     date('Y-m-d H:i:s');;
             
         ?>
 
@@ -106,7 +108,7 @@
     
 
         </div>
-        <footer class="has-sticky-footer">
+        <!-- <footer class="has-sticky-footer">
         <div>
             <div>
                 <h6>Redes sociales</h6>
@@ -115,7 +117,7 @@
                 <h6>About</h6>
             </div>
         </div>
-        </footer>
+        </footer> -->
 </body>
 <style>
 
