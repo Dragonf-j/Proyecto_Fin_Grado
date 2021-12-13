@@ -46,16 +46,17 @@ class userLapCrud{
 
 
 
-    public function anadir(laptopuser $lapu){
+    public function anadir($email_user, $id_portatil){
 
         try{
-            $sentancia = 'INSERT INTO pp VALUES(:email_user, id_portatil)';
-
+            $sentancia = 'INSERT INTO portatiles_has_user VALUES(:email_user, :id_portatil)';
+            var_dump($email_user);
+            var_dump($id_portatil);
             $this->consulta = $this->conexion->prepare($sentancia);
             $this->consulta->execute(
                 array(
-                    ':email_user'=> $lapu->getIDUSer(),
-                    ':id_portatil'=>$lapu->getIDLaptop()
+                    ':email_user'=>$email_user,
+                    ':id_portatil'=>$id_portatil
                 )
             );
 
@@ -66,7 +67,7 @@ class userLapCrud{
 
     public function mostrar(){
         try{
-            $sentancia = 'SELECT  email_user, id_portatil FROM pp';
+            $sentancia = 'SELECT  email_user, id_portatil FROM portatiles_has_user';
             $this->consulta = $this->conexion->prepare($sentancia);
             $this->consulta->execute();
             $this->userLap=$this->consulta->fetchAll(PDO::FETCH_ASSOC);

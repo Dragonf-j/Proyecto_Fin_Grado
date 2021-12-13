@@ -204,20 +204,20 @@ session_start();
 
                 $lap = $cLaptop->mostrar();
                 montarTabla::montar($lap);
-                
-            }
-            if (isset($_SESSION["usuario"])) {
-                $user = $_SESSION["usuario"];
-                foreach ($lap as $key => $value) {
-                    $id = $value['id'];
+                if (isset($_SESSION["usuario"])) {
+                    $user = $_SESSION["usuario"];
+                    foreach ($lap as $key => $value) {
+                        $id = $value['id'];
+                    }
+                    // var_dump($id);
+                    $id2 = (int)$id;
+                    // var_dump($id2);
+                    // echo $user;
+                    
+                    $lup->anadir( $user,$id2);
                 }
-                $id2 = (int)$id;
-                var_dump($id2);
-                // echo $user;
-                $al = new laptopuser($user, $id2);
-             
-                $lup->anadir($al);
             }
+          
             ?>
 
         </div>
