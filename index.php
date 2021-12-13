@@ -78,7 +78,7 @@
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
             <?php
             
-            echo "Hola Usuario: " . $_SESSION['usuario']."<br>";
+            // echo "Hola Usuario: " . $_SESSION['usuario']."<br>";
             echo '<button type="submit">';
             echo '<a href="vistas/destruir.php">Desconectar</a>';
             echo '</button>';
@@ -86,8 +86,9 @@
           
            
             require_once('models/model_laptop_user/userLapCrud.php');
+            $usuario=$_SESSION['usuario'];
             $ulc = new userLapCrud();
-            $datos = $ulc->mostrar();
+            $datos = $ulc->mostrar($usuario);
             require_once('vistas/Vistas_dinamicas/montarTabla.php');
             // var_dump($datos);
             if($datos == null){
