@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -70,7 +73,7 @@
     <div>
         <div class="container bg-light d-flex flex-column justify-content-around ">
             <form action="" method="POST" class="grid">
-                
+
                 <div class="form-check " id="tipos">
                     <label for="Tipo">Tipos de portatiles</label><br>
                     <label for="gaming">Gaming</label>
@@ -143,7 +146,7 @@
                 </div>
                 <div class="form-check" id="Pulgadas">
                     <label for="Pulgadas">Pulgadas
-                        
+
                     </label><br>
                     <label for="pequeño">Pequeño</label>
                     <input type="radio" class="form-check-input" name="Pulgadas" value="pequeño">
@@ -158,7 +161,7 @@
                 </div>
                 <div class="form-check" id="hz">
                     <label for="hz">Hercios
-                        
+
                     </label><br>
                     <label for="estandar">Estandar</label>
                     <input type="radio" class="form-check-input" name="hz" value="estandar">
@@ -190,15 +193,31 @@
             <?php
             require_once('../controlers/controlador.php');
             $cLaptop = new ControladorPortatil();
+            require_once('/xampp/htdocs/Dragonf/proyecto/models/model_laptop_user/userLapCrud.php');
+            require_once('/xampp/htdocs/Dragonf/proyecto/models/model_laptop_user/lap_user.php');
+
+            $lup = new userLapCrud();
             // var_dump($cLaptop->mostrar());
 
 
-            if(isset($_POST['mostrar'])){
-               
-               $cLaptop->mostrar();
-              
-              }
+            if (isset($_POST['mostrar'])) {
 
+                $lap = $cLaptop->mostrar();
+                montarTabla::montar($lap);
+                
+            }
+            if (isset($_SESSION["usuario"])) {
+                $user = $_SESSION["usuario"];
+                foreach ($lap as $key => $value) {
+                    $id = $value['id'];
+                }
+                $id2 = (int)$id;
+                var_dump($id2);
+                // echo $user;
+                $al = new laptopuser($user, $id2);
+             
+                $lup->anadir($al);
+            }
             ?>
 
         </div>
@@ -242,6 +261,7 @@
         border: 1px black solid;
         padding: 8vh;
     }
+
     /* footer{
         bottom: 0;
         position: fixed;

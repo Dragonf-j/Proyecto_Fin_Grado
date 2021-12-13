@@ -1,4 +1,5 @@
 <?php
+   
 // require_once('../vistas/Vistas_dinamicas/montarTabla.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamicas/montarTabla.php');
 /**
@@ -90,11 +91,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamica
     
 
 
-    if(isset($_POST['mostrar'])){
-      // $cLaptop->random();
-      $d = $cLaptop->mostrar();
-      montarTabla::montar($d);
-    }
+   //  if(isset($_POST['mostrar'])){
+   //    // $cLaptop->random();
+   //    $d = $cLaptop->mostrar();
+   //    // var_dump($d);
+   //    montarTabla::montar($d);
+
+      
+   //  }
     
 
 
