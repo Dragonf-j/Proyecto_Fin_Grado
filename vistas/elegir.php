@@ -198,7 +198,7 @@ session_start();
 
         </div>
 
-        <div class="container bg-light p-2 ms-auto principal conte thumbnail">
+        <div class="container bg-light p-2 ms-auto principal thumbnail">
 
             <?php
             require_once('../controlers/controlador.php');
@@ -219,10 +219,10 @@ session_start();
                     foreach ($lap as $key => $value) {
                         $id = $value['id'];
                     }
-                
+                    // var_dump($id);
                     $id2 = (int)$id;
-                  
-                  
+                    // var_dump($id2);
+                    // echo $user;
                     
                     $lup->anadir( $user,$id2);
                 }
@@ -231,7 +231,6 @@ session_start();
             ?>
 
         </div>
-    </div>
     <!-- <footer class="has-sticky-footer">
         <div>
             <div>
