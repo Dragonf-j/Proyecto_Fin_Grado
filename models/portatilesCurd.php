@@ -97,33 +97,33 @@ class PortatilCrud
         }
     }
 
-    public function ContarLaptop()
-    {
-        try {
+    // public function ContarLaptop()
+    // {
+    //     try {
 
-            $sentencia = 'SELECT COUNT(id) FROM portatil';
+    //         $sentencia = 'SELECT COUNT(id) FROM portatil';
 
-            $this->consulta = $this->conexion->prepare($sentencia);
-            $this->consulta->execute();
-            $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+    //         $this->consulta = $this->conexion->prepare($sentencia);
+    //         $this->consulta->execute();
+    //         $datos = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
 
-            require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
+    //         require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamicas/contar.php');
             
-            $r = contar::rercorrer($datos);
+    //         $r = contar::rercorrer($datos);
        
-            $numero =  random_int(1, $r);
+    //         $numero =  random_int(1, $r);
 
             
-                $sentencia2 = "SELECT * FROM portatil WHERE id='$numero'";
-                $this->consulta = $this->conexion->prepare($sentencia2);
-                $this->consulta->execute();
-                $this->portatiles = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
+    //             $sentencia2 = "SELECT * FROM portatil WHERE id='$numero'";
+    //             $this->consulta = $this->conexion->prepare($sentencia2);
+    //             $this->consulta->execute();
+    //             $this->portatiles = $this->consulta->fetchAll(PDO::FETCH_ASSOC);
 
-                return $this->portatiles;
+    //             return $this->portatiles;
              
-                //  echo "aleatorio ".$numero."<br>";
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
+    //             //  echo "aleatorio ".$numero."<br>";
+    //     } catch (PDOException $e) {
+    //         echo $e->getMessage();
+    //     }
+    // }
 }

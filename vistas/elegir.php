@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Elige tu portátil</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -61,21 +61,34 @@ session_start();
                         </li>
                     </ul>
                 </div>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a href="loging.php">Inicia sesion</a>
-                    <a href="registrar.php">Registrate</a>
-                </div>
+                <?php
+                if (!isset($_SESSION["usuario"])) {
+                    echo '<div class="collapse navbar-collapse" id="collapsibleNavbar">';
+                    echo ' <a href="loging.php">Inicia sesion</a>';
+                    echo  '<a href="registrar.php">Registrate</a>';
+                    echo '</div>';
+                }else{
+                    echo '<div class="collapse navbar-collapse" id="collapsibleNavbar">';
+                    echo '<p> Bienvenido '. $_SESSION["usuario"].'</p>';
+                    echo '<br>';
+                    echo '<button type="submit">';
+                    echo '<a href="destruir.php">Desconectar</a>';
+                    echo '</button>';
+                 
+                    echo '</div>';
+                }
+                ?>
             </div>
         </nav>
 
     </header>
 
     <div>
-        <div class="container bg-light d-flex flex-column justify-content-around ">
+        <div class="container bg-light d-flex flex-column justify-content-around thumbnail">
             <form action="" method="POST" class="grid">
 
-                <div class="form-check " id="tipos">
-                    <label for="Tipo">Tipos de portatiles</label><br>
+                <div class="form-check thumbnail" id="tipos">
+                    <label for="Tipo"><h4>Tipos de portatiles</h4></label><br>
                     <label for="gaming">Gaming</label>
                     <input type="radio" class="form-check-input" class="tipos" name="tipos" value="gaming">
                     <br>
@@ -92,8 +105,8 @@ session_start();
 
 
 
-                <div class="form-check" id="almacenamiento">
-                    <label for="Almacenamiento">Almacenamiento</label><br>
+                <div class="form-check thumbnail" id="almacenamiento">
+                    <label for="Almacenamiento"><h4>Almacenamiento</h4></label><br>
                     <label for="menos">250 GB</label>
                     <input type="radio" class="form-check-input" name="almacenamiento" value="menos">
                     <br>
@@ -107,12 +120,10 @@ session_start();
                     <input type="radio" class="form-check-input" name="almacenamiento" value="max-extend">
                 </div>
 
-                <div class="form-check" id="ram">
-                    <label for="ram">RAM
+                <div class="form-check thumbnail" id="ram">
+                    <label for="ram"><h4>RAM</h4>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-memory" viewBox="0 0 16 16">
-                            <path d="M1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707-.293l.353-.353a.5.5 0 0 1 .708 0l.353.353a1 1 0 0 0 .707.293H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1Zm.5 1h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm5 0h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm4.5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4ZM2 10v2H1v-2h1Zm2 0v2H3v-2h1Zm2 0v2H5v-2h1Zm3 0v2H8v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Z" />
-                        </svg>
+                      
                     </label><br>
                     <!-- <label for="4">4</label>
                     <input type="radio" class="form-check-input" name="memoria" value="4">
@@ -127,11 +138,9 @@ session_start();
                     <input type="radio" class="form-check-input" name="memoria" value="32">
                 </div>
 
-                <div class="form-check" id="Precio">
-                    <label for="precio">Presupuesto
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
-                            <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z" />
-                        </svg>
+                <div class="form-check thumbnail" id="Precio">
+                    <label for="precio"><h4>Presupuesto</h4>
+                        
                     </label><br>
                     <label for="bajo">Bajo</label>
                     <input type="radio" class="form-check-input" name="precio" value="bajo">
@@ -144,10 +153,11 @@ session_start();
                     <br>
 
                 </div>
-                <div class="form-check" id="Pulgadas">
-                    <label for="Pulgadas">Pulgadas
+                <div class="form-check thumbnail" id="Pulgadas">
+                    <label for="Pulgadas"> <h4>Pulgadas</h4>
 
                     </label><br>
+                    
                     <label for="pequeño">Pequeño</label>
                     <input type="radio" class="form-check-input" name="Pulgadas" value="pequeño">
                     <br>
@@ -159,8 +169,8 @@ session_start();
                     <br>
 
                 </div>
-                <div class="form-check" id="hz">
-                    <label for="hz">Hercios
+                <!-- <div class="form-check" id="hz">
+                    <label for="hz"><h4>Hercios</h4>
 
                     </label><br>
                     <label for="estandar">Estandar</label>
@@ -173,7 +183,7 @@ session_start();
                     <input type="radio" class="form-check-input" class="form-check-input" name="hz" value="alto">
                     <br>
 
-                </div>
+                </div> -->
 
 
 
@@ -188,7 +198,7 @@ session_start();
 
         </div>
 
-        <div class="container bg-light p-2 ms-auto principal thumbnail">
+        <div class="container bg-light p-2 ms-auto principal conte thumbnail">
 
             <?php
             require_once('../controlers/controlador.php');
@@ -209,10 +219,10 @@ session_start();
                     foreach ($lap as $key => $value) {
                         $id = $value['id'];
                     }
-                    // var_dump($id);
+                
                     $id2 = (int)$id;
-                    // var_dump($id2);
-                    // echo $user;
+                  
+                  
                     
                     $lup->anadir( $user,$id2);
                 }
@@ -222,7 +232,7 @@ session_start();
 
         </div>
     </div>
-    <footer class="has-sticky-footer">
+    <!-- <footer class="has-sticky-footer">
         <div>
             <div>
                 <h6>Redes sociales</h6>
@@ -234,12 +244,13 @@ session_start();
 
 
 
-    </footer>
+    </footer> -->
 </body>
 <style>
     .grid {
         display: grid;
         grid-template-columns: 33% 33% 33%;
+        margin: 10px;
 
     }
 
@@ -249,6 +260,9 @@ session_start();
         width: 20%;
         align-items: center;
         border-top: 1px solid grey;
+    }
+    .conte{
+        grid-column: 1 / span 3;
     }
 
     /* .principal {
@@ -267,11 +281,17 @@ session_start();
         position: fixed;
         width: 100%;
     } */
-
+    /* .container{
+        height: 100vh;
+    } */
     #boton {
         display: grid;
         grid-template-columns: 20%;
+        margin-top: 20px;
 
+    }
+    .form-check{
+        margin-top: 20px;
     }
 </style>
 

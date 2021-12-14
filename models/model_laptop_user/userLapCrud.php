@@ -68,7 +68,7 @@ class userLapCrud{
 
     public function mostrar($user){
         try{
-            $sentancia = "SELECT * FROM portatiles_has_user where (email_user = '$user')";
+            $sentancia = "SELECT id_portatil, Fecha FROM portatiles_has_user where (email_user = '$user')";
             $this->consulta = $this->conexion->prepare($sentancia);
             $this->consulta->execute();
             $this->userLap=$this->consulta->fetchAll(PDO::FETCH_ASSOC);

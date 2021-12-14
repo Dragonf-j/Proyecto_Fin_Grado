@@ -6,46 +6,46 @@ class montarTabla
     {
 ?>
 
-            <div class="thumbnail">
-                <?php
-                foreach ($datos as $key => $value) {
+        <div class="thumbnail">
+            <?php
+            foreach ($datos as $key => $value) {
 
 
-                    if ($key == 0) {
+                if ($key == 0) {
 
-                        echo '<table>';
-                        echo '<tr>';
-
-
-                        foreach ($value as $k1 => $v1) {
-
-                            echo '<th>';
-                            echo $k1;
-                            echo '</th>';
-                        }
-                        echo '</tr>';
-                    }
-
+                    echo '<table>';
                     echo '<tr>';
+
 
                     foreach ($value as $k1 => $v1) {
 
-                        echo '<td>';
-                        echo $v1;
-                        echo '</td>';
+                        echo '<th>';
+                        echo $k1;
+                        echo '</th>';
                     }
                     echo '</tr>';
                 }
-                ?>
+
+                echo '<tr>';
+
+                foreach ($value as $k1 => $v1) {
+
+                    echo '<td>';
+                    echo $v1;
+                    echo '</td>';
+                }
+                echo '</tr>';
+            }
+            ?>
 
 
 
 
 
-            </div>
+        </div>
 
         <?php
-        
+
     }
 
     public static function montar($datos)
@@ -65,20 +65,21 @@ class montarTabla
 
 
         ?>
-            <div>
+            <div class="contenedor">
                 <h3 class="container bg-light p-2 ms-auto h3"><?php echo $nombre; ?></h3>
                 <?php
-                ?> <h5><?php echo $tipo; ?></h5>
+                ?> <h4>TIpo: <?php echo $tipo; ?></h4>
+                <h6>Precio: <?php echo $precioa; ?>€</h6>
                 <?php
                 ?> <p>Memoria RAM: <?php echo $ram; ?>GB</p>
                 <?php
                 ?>
-                <p>ALmacenamiento en disco: <?php echo $almacenamiento; ?></p>
+                <p>Almacenamiento en disco: <?php echo $almacenamiento; ?></p>
                 <img class="img-responsive img-thumbnail est" src="../img/<?php echo $img; ?>" alt="img">
                 <?php echo '<br>'; ?>
                 <button class="btn btn-outline-secondary">
                     <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
-                    <p><?php echo $precioa; ?>€</p>
+
                 </button>
 
             </div>
@@ -86,11 +87,37 @@ class montarTabla
 <?php
         }
     }
+    public static function montar2($datos)
+    {
+
+        foreach ($datos as $key => $value) {
+            $nemail = $value['email_user'];
+            $his = $value["historico"];
+
+            ?>
+            <div class="contenedor">
+                <!-- <h3 class="container bg-light p-2 ms-auto h3">Usuario<?php echo $nemail; ?></h3> -->
+               
+                
+
+            </div>
+            
+                        <?php  echo $his;?>
+               
+<?php
+           
+        }
+    }
 }
 ?>
 <style>
-    .est{
+    .est {
         align-items: center;
         justify-content: center;
+    }
+
+    .contenedor {
+        border: 1px solid black;
+        text-align: center;
     }
 </style>

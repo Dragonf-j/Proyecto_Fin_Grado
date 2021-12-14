@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="estilos/estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- $sentencia='SELECT * from portatil cross join usuarios ' -->
+    <script src="../javaScript/comprobar.js"></script>
 </head>
 
-<body>
+
+<body ">
     <div class="cabecera">
         <?php
         require('../controlers/controler_user/controler_user.php');
@@ -31,15 +33,15 @@
         <form action="" method="post">
             <label for="nombre">Nombre</label>
             <br>
-            <input type="text" name="nombre" id="nombre">
+            <input type="text" name="nombre" id="nombre" required>
             <br>
             <label for="email">Email</label>
             <br>
-            <input type="email" name="correo" id="correo">
+            <input type="email" name="correo" id="correo" required>
             <br>
             <labbel for="contra">Contraseña</labbel>
             <br>
-            <input type="password" name="contra" id="contra">
+            <input type="password" name="contra" id="contra" onblur="validadCOntraseña()" required>
             <br>
             <input type="submit" value="Enviar" name="enviar">
         </form>
@@ -93,6 +95,7 @@
         padding: 10px;
    
     }
+ 
 </style>
 
 </html>

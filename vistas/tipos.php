@@ -1,3 +1,5 @@
+<?php
+session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -53,10 +55,23 @@
                         </li>
                     </ul>
                 </div>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a href="loging.php">Inicia sesion</a>
-                    <a href="registrar.php">Registrate</a>
-                </div>
+                <?php
+                if (!isset($_SESSION["usuario"])) {
+                    echo '<div class="collapse navbar-collapse" id="collapsibleNavbar">';
+                    echo ' <a href="loging.php">Inicia sesion</a>';
+                    echo  '<a href="registrar.php">Registrate</a>';
+                    echo '</div>';
+                } else {
+                    echo '<div class="collapse navbar-collapse navbar-dark " id="collapsibleNavbar">';
+                    echo '<p> Bienvenido ' . $_SESSION["usuario"] . '</p>';
+                    echo '<br>';
+                    echo '<button type="submit">';
+                    echo '<a href="destruir.php">Desconectar</a>';
+                    echo '</button>';
+
+                    echo '</div>';
+                }
+                ?>
             </div>
         </nav>
 
@@ -122,14 +137,36 @@
                     Este tipo de portatiles podemos encontrar diferentes configuraciones, puedemos escoger un equipo con un presusupuesto reducido
                     que dispondra de una configuracion de hahrdware menor pero con el que podremos jugar a juegos menos exigetnes o juegos competitivos
                     que consumen pocos recuros como por ejemplo:
+                    <br>
+
+                    <br>
                 <ul>
                     <li>LOL (League of legend)</li>
                     <li>Valorant</li>
                     <li>Fortnite</li>
                     <li>Counter Strike Global Offensive</li>
                 </ul>
+                <br>
+
+                    <br>
                 Igualemnte podemos econtrar equipos con mejor hardware capaces de ejucutar los juegos triple A mas exigentes del mercado,
-                claro esta que para obtener esta mejroa de hardware deberemos hacer una inversión aun mayor
+                claro esta que para obtener esta mejroa de hardware deberemos hacer una inversión aun mayor.
+                <br>
+
+                    <br>
+                <ul>
+                    <li>Procesador: </li>
+                    <p> Es el cerebro del ordenador</p>
+                    <li>Gráfica: </li>
+                    <p>Procesasador dedicado para gráficos.</p>
+                    <li>Pantalla:</li>
+                    <p>Es donde se muestra la infromacion al suaurio con una interfaz amigable. en portatiles actuales podemos encontrar patallas con grandes hercios. Los hercios es la frercuencia con que la pantalla puede mostrar las imaganes por segundo</p>
+                </ul>
+                <br>
+
+                    <br>
+                El principal incoveniente que tienen los portátiles destinados a juegos es su peso. Estos suelen pesar entre los 2kg hasta los 3kg, esto es debido a que la grafica y el procesador durante las partidas pueden alcanzar altas temperaturas, para poder
+                refrigerar estos componentes tienen un sistema de refigeracion de gran grosor que hace que aumente el peso.
                 </p>
                 <a class="nav-link" href="#header">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
@@ -142,33 +179,21 @@
                 <h3 id="trabajo">Workstation</h3>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    v
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
+                    Los portátiles workstation son aquellos que estan destinados al trabajo exigente. Este tipo de equipos suele tener un hardware exigente. A diferencia de los portatiles gaming que suelen tener un peso elevado estos portatiles tienden a ser
+                    livianos ya que la mayoria de estos portátiles no nesesitan una gran refrigeración. 
+                    <br>
+
+                    <br>
+                    La mayoria de estos portátiles suelen estar enfocados a usuarios que requieren de potencia para su trabajo y que por su peso tenga una gran movilidad. Algunos de los ejemplos de usuarios son los siguientes:
+                    <ul>
+                        <li>Programadores</li>
+                        <li>Diseñadores gráficos</li>
+                        <li>Ingenieros</li>
+                    </ul>
+                    <br>
+
+                    <br>
+                    La principal desventaja que tienen estos equipos su almacenamiento reducido, por lo que tendras que cambiar el disco duro por uno de mayor capacidad u optar por servicios en la sube de almacenamiento
                 </p>
                 <a class="nav-link" href="#header">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
@@ -178,36 +203,22 @@
             </div>
             <div class="mb-1">
 
-                <h3 id="basico">Ofirmatica</h3>
+                <h3 id="basico">Básico</h3>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    v
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
+                    Este tipo de equipos se caracteriza por tener un hardware muy simple y un precio bastante Economico que oscila entre los 350€ y los 599€. Estos estan destinados a usuarios que van a realizar pequeñas tareas por ejemplo:
+                    <br>
+
+                    <br>
+                    <ul>
+                        <li>Navegar en internet</li>
+                        <li>Ver películas</li>
+                        <li>Realizar documentos</li>
+                    </ul>
+                    <br>
+
+                    <br>
+                    El principal inconveniente de estos portátiles es que debido a su precio el hardware puede ser algo lento.
                 </p>
                 <a class="nav-link" href="#header">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
@@ -220,33 +231,21 @@
                 <h3 id="convertible">2 en 1</h3>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    v
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit minima eligendi rerum veritatis, aliquam quos! Suscipit enim saepe natus, cumque consequatur quam. Placeat voluptates eius atque minus ut labore!
+                    Los portátiles 2 en 1 o convertibles son aquellos que tienen lo mejor del mundo de las tablet y de los portátiles.
+                    <br>
+
+                    <br>
+                    <ul>
+                        <li>Pantalla táctil</li>
+                        <li>Hardware competente</li>
+                    </ul>
+                    <br>
+
+                    <br>
+                    Estos equipos pueden ser usados para realizar las tareas mas simples como navegar por internet o realizar tareas que requieren de algo mas de potencia hacer diseños gráficos. Muchos de estos portátiles pueden acoplarse a un teclado o usarse como tableta, tambien hay modelos 
+                    que su pantalla 360 grados. Suelen tener un lapiz táctil para la pantalla, este complento en la mayoria de casos se compra a parte del portátil.
+                    
+                    
                 </p>
 
                 <a class="nav-link" href="#header">
@@ -259,7 +258,7 @@
     </div>
     </div>
 
-    <footer class="has-sticky-footer">
+    <!-- <footer class="has-sticky-footer">
         <div>
             <div>
                 <h6>Redes sociales</h6>
@@ -269,15 +268,13 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 </body>
 <style>
     .contenedores {
         margin-top: 5vh;
 
     }
-
-    
 </style>
 
 </html>

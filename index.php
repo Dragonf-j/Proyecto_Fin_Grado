@@ -1,3 +1,5 @@
+<?php
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -50,11 +52,24 @@
                         </li>
                     </ul>
                 </div>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <a href="vistas/loging.php">Inicia sesion</a>
-                    <a href="vistas/registrar.php">Registrate</a>
-                </div>
-                
+                <?php
+                if (!isset($_SESSION["usuario"])) {
+                    echo '<div class="collapse navbar-collapse" id="collapsibleNavbar">';
+                    echo ' <a href="vistas/loging.php">Inicia sesion</a>';
+                    echo  '<a href="vistas/registrar.php">Registrate</a>';
+                    echo '</div>';
+                }else{
+                    echo '<div class="collapse navbar-collapse" id="collapsibleNavbar">';
+                    echo '<p> Bienvenido '. $_SESSION["usuario"].'</p>';
+                    echo '<br>';
+                    echo '<button type="submit">';
+                    echo '<a href="vistas/destruir.php">Desconectar</a>';
+                    echo '</button>';
+                 
+                    echo '</div>';
+                }
+                ?>
+
             </div>
         </nav>
 
@@ -62,51 +77,47 @@
     </header>
 
     <?php
-    session_start();
+    // session_start();
 
     if (!isset($_SESSION["usuario"])) {
-        ?>
+    ?>
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
             <h2 class="h2">Vaya parece que no hay Registros</h2>
-        <!-- <img src="img/gif/PowerlessFlippantGenet-size_restricted.gif"  class="img-responsive img-thumbnail" alt=""> -->
+            <!-- <img src="img/gif/PowerlessFlippantGenet-size_restricted.gif"  class="img-responsive img-thumbnail" alt=""> -->
         </div>
-        <?php
-       
+    <?php
+
     } else {
         // 
     ?>
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
-            <?php
-            
-            // echo "Hola Usuario: " . $_SESSION['usuario']."<br>";
-            echo '<button type="submit">';
-            echo '<a href="vistas/destruir.php">Desconectar</a>';
-            echo '</button>';
-            echo "<br>";
-          
-           
-            require_once('models/model_laptop_user/userLapCrud.php');
-            $usuario=$_SESSION['usuario'];
-            $ulc = new userLapCrud();
-            $datos = $ulc->mostrar($usuario);
-            require_once('vistas/Vistas_dinamicas/montarTabla.php');
-            // var_dump($datos);
-            if($datos == null){
-                echo 'Mensaje de prueba <br>';
-            }else{
-                montarTabla::montarIndex($datos);
-            }
-            
+        <?php
 
+        // echo "Hola Usuario: " . $_SESSION['usuario']."<br>";
+      
+
+
+        require_once('models/model_laptop_user/userLapCrud.php');
+        $usuario = $_SESSION['usuario'];
+        echo '<h4>Usuario '.$usuario.'</h4>';
+        $ulc = new userLapCrud();
+        $datos = $ulc->mostrar($usuario);
+        require_once('vistas/Vistas_dinamicas/montarTabla.php');
+        // var_dump($datos);
+        if ($datos == null) {
+            echo 'Mensaje de prueba <br>';
+        } else {
+            montarTabla::montarIndex($datos);
+        }
     }
-    echo     date('Y-m-d H:i:s');;
-            
+  
+
         ?>
 
-        
 
-            
-    
+
+
+
 
         </div>
         <!-- <footer class="has-sticky-footer">
@@ -121,31 +132,36 @@
         </footer> -->
 </body>
 <style>
-
-    
-
     .tabla {
 
         padding: 8vh;
 
     }
+
     h2 {
-        
+
         border-bottom: 1px black solid;
         height: 5vh;
         text-align: center;
         grid-column: 1 / span 3;
         grid-row: 1;
     }
-    
+    h4{
+        text-align: center;
+    }
+
     /* footer{
         bottom: 0;
         position: fixed;
         width: 100%;
     } */
-    img{
+    img {
         width: 100%;
     }
 </style>
+<script>
+
+
+</script>
 
 </html>
