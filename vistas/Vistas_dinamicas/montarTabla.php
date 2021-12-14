@@ -62,6 +62,7 @@ class montarTabla
             // $enlacePc = $value['enlace_pccomponetes'];
             // $preciop = $value['precio_pcpcomponentes'];
             $almacenamiento = $value['almacenamiento'];
+            $desc = $value['Descripcion'];
 
 
         ?>
@@ -81,7 +82,8 @@ class montarTabla
                     <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
 
                 </button>
-
+                <h6>Descripción</h6>
+                <p> <?php echo $desc; ?></p>
             </div>
 
 <?php
