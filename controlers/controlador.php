@@ -61,7 +61,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/Dragonf/proyecto/vistas/Vistas_dinamica
            
             
             
-            $datos = $this->laptop->getPortatil($tipo, $ram, $precio, $pulgadas);
+            $datos = $this->laptop->getPortatil($tipo, $ram, $precio, $pulgadas, $almacenamiento);
             // var_dump($datos);
          return $datos;
         

@@ -108,16 +108,16 @@ session_start();
                 <div class="form-check thumbnail" id="almacenamiento">
                     <label for="Almacenamiento"><h4>Almacenamiento</h4></label><br>
                     <label for="menos">250 GB</label>
-                    <input type="radio" class="form-check-input" name="almacenamiento" value="menos">
+                    <input type="radio" class="form-check-input" name="almacenamiento" value="250GB">
                     <br>
                     <label for="medio">500 GB</label>
-                    <input type="radio" class="form-check-input" name="almacenamiento" value="medio">
+                    <input type="radio" class="form-check-input" name="almacenamiento" value="500GB">
                     <br>
                     <label for="max">1 TB</label>
-                    <input type="radio" class="form-check-input" name="almacenamiento" value="max">
+                    <input type="radio" class="form-check-input" name="almacenamiento" value="1TB">
                     <br>
                     <label for="max-extend">+1 TB</label>
-                    <input type="radio" class="form-check-input" name="almacenamiento" value="max-extend">
+                    <input type="radio" class="form-check-input" name="almacenamiento" value="+1TB">
                 </div>
 
                 <div class="form-check thumbnail" id="ram">

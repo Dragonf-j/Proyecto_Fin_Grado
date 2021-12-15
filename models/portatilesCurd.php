@@ -64,10 +64,10 @@ class PortatilCrud
     }
 
     // }
-    public function getPortatil($tipo, $ram, $precio, $pulgadas)
+    public function getPortatil($tipo, $ram, $precio, $pulgadas, $almacenamiento)
     {
         try {
-            $sentencia = "SELECT * FROM portatil WHERE (tipo= '$tipo') AND (ram = $ram) AND (presupuesto= '$precio') AND (pulgadas= '$pulgadas')";
+            $sentencia = "SELECT * FROM portatil WHERE (tipo= '$tipo') AND (ram = $ram) AND (presupuesto= '$precio') AND (pulgadas= '$pulgadas') AND (	almacenamiento='$almacenamiento')";
             $this->consulta = $this->conexion->prepare($sentencia);
             // echo 'Consulta realizada';
             // echo '<br>';
