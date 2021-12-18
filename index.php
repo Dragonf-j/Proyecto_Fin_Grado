@@ -84,6 +84,8 @@ session_start(); ?>
         <div class="container container-fluid bg-light p-2 ms-auto principal thumbnail">
             <h2 class="h2">Vaya parece que no hay Registros</h2>
             <!-- <img src="img/gif/PowerlessFlippantGenet-size_restricted.gif"  class="img-responsive img-thumbnail" alt=""> -->
+            <p>Para poder ver tu historial de portátiles debes registrarte o iniciar sessión</p>
+            <img src="img/gif/8757eeeee94c358e7be40b212dc79203.gif" alt="">
         </div>
     <?php
 
@@ -105,7 +107,7 @@ session_start(); ?>
         require_once('vistas/Vistas_dinamicas/montarTabla.php');
         // var_dump($datos);
         if ($datos == null) {
-            echo 'Mensaje de prueba <br>';
+            echo '<img src="img/gif/8757eeeee94c358e7be40b212dc79203.gif" alt="Gif de los pinguinos de magadascar diciendo que no has visto nada">';
         } else {
             montarTabla::montarIndex($datos);
         }
@@ -115,7 +117,7 @@ session_start(); ?>
         ?>
 
 
-
+    
 
 
 

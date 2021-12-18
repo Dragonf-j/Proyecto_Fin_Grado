@@ -79,7 +79,7 @@ class montarTabla
                 <img class="img-responsive img-thumbnail est" src="../img/<?php echo $img; ?>" alt="img">
                 <?php echo '<br>'; ?>
                 <button class="btn btn-outline-secondary">
-                    <a class="nav-link" href="<?php echo $enlaceA; ?>">Amazon</a>
+                    <a class="nav-link" id="enlace"   href="<?php echo $enlaceA; ?>" onclick="arbir()">Amazon</a>
 
                 </button>
                 <h6>Descripción</h6>
@@ -123,3 +123,4 @@ class montarTabla
         text-align: center;
     }
 </style>
+<script src="../../javaScript/abrir.js"></script>

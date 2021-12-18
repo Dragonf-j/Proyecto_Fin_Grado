@@ -84,10 +84,10 @@ session_start();
     </header>
 
     <div>
-        <div class="container bg-light d-flex flex-column justify-content-around thumbnail">
+        <div class="container bg-light d-flex flex-column justify-content-around ">
             <form action="" method="POST" class="grid">
 
-                <div class="form-check thumbnail" id="tipos">
+                <div class="form-check " id="tipos">
                     <label for="Tipo"><h4>Tipos de portatiles</h4></label><br>
                     <label for="gaming">Gaming</label>
                     <input type="radio" class="form-check-input" class="tipos" name="tipos" value="gaming">
@@ -105,7 +105,7 @@ session_start();
 
 
 
-                <div class="form-check thumbnail" id="almacenamiento">
+                <div class="form-check " id="almacenamiento">
                     <label for="Almacenamiento"><h4>Almacenamiento</h4></label><br>
                     <label for="menos">250 GB</label>
                     <input type="radio" class="form-check-input" name="almacenamiento" value="250GB">
@@ -138,7 +138,7 @@ session_start();
                     <input type="radio" class="form-check-input" name="memoria" value="32">
                 </div>
 
-                <div class="form-check thumbnail" id="Precio">
+                <div class="form-check " id="Precio">
                     <label for="precio"><h4>Presupuesto</h4>
                         
                     </label><br>
@@ -153,8 +153,8 @@ session_start();
                     <br>
 
                 </div>
-                <div class="form-check thumbnail" id="Pulgadas">
-                    <label for="Pulgadas"> <h4>Pulgadas</h4>
+                <div class="form-check " id="Pulgadas"> 
+                    <label for="Pulgadas"> <h4 class=" thumbnail">Pulgadas</h4>
 
                     </label><br>
                     
@@ -224,6 +224,7 @@ session_start();
                     // var_dump($id2);
                     // echo $user;
                     
+                    
                     $lup->anadir( $user,$id2);
                 }
             }
@@ -247,9 +248,10 @@ session_start();
 </body>
 <style>
     .grid {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        margin: 10px;
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        /* margin: 10px; */
 
     }
 
@@ -286,12 +288,19 @@ session_start();
     #boton {
         display: grid;
         grid-template-columns: 20%;
-        margin-top: 20px;
+        /* margin-top: 20px; */
 
     }
-    .form-check{
-        margin-top: 20px;
+  
+    @media only screen and (max-width: 600px) {
+        .grid {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        margin: 10px;
+
     }
+}
+ 
 </style>
 
 </html>
